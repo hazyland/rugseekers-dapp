@@ -16,7 +16,6 @@ export default function Landing() {
           <div className="tokenomics">Tokenomics<TokenomicsPanel/></div>
           <div className="vettedProjects">Vetted Projects<ProjectCard/></div>
           <div className="roadMap">Raodmap<RoadmapCard/></div>
-
       </div>
     );
 
