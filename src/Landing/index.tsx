@@ -6,7 +6,7 @@ import TokenomicsPanel from './tokenomicsPanel';
 
 
 
-export default function Landing() {
+function Landing() {
     
     return (
       <div className="landing">
@@ -20,3 +20,5 @@ export default function Landing() {
     );
 
 }
+
+export default Landing

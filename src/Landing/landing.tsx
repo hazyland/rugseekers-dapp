@@ -1,17 +1,55 @@
-import React from "react";
-import "./App.css";
-import { BrowserRouter as BrowserRouterProvider, Route, Routes } from "react-router-dom";
+// import React from "react";
+// import "./App.css";
+// import Landing from "./index";
+// import { BrowserRouter as BrowserRouterProvider, Route, Routes } from "react-router-dom";
 
 
 
-function App() {
-    return (
-        <BrowserRouterProvider>
-            <Routes>
+// function App() {
+//     return (
+//         // <Landing/>
+//         <BrowserRouterProvider>
+//             <Routes>
 
-            </Routes>
-        </BrowserRouterProvider>
-    );
+//             </Routes>
+//         </BrowserRouterProvider>
+//     );
+// }
+
+// export default App;
+
+
+
+
+import landing from "./landing";
+import LoginPanel from "./loginPanel";
+import ProjectCard from "./projectCard";
+import RoadmapCard from "./roadmapCard";
+import TokenomicsPanel from "./tokenomicsPanel";
+
+function Landing() {
+  return (
+    <div className="landing">
+      <div className="landing-row">Who are Rugseekers</div>
+      <div className="landing-row">Bloomberg</div>
+      <div className="landing-row">
+        Yar Bounty Program
+        <LoginPanel />
+      </div>
+      <div className="landing-row">
+        Tokenomics
+        <TokenomicsPanel />
+      </div>
+      <div className="landing-row">
+        Vetted Projects
+        <ProjectCard />
+      </div>
+      <div className="landing-row">
+        Raodmap
+        <RoadmapCard />
+      </div>
+    </div>
+  );
 }
 
-export default App;
+export default Landing;
