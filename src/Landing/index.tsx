@@ -10,12 +10,24 @@ function Landing() {
     
     return (
       <div className="landing">
-          <div className="who">Who are Rugseekers</div>
-          <div className="featuredIn">Bloomberg</div>
-          <div className="bounty">Yar Bounty Program<LoginPanel/></div>
-          <div className="tokenomics">Tokenomics<TokenomicsPanel/></div>
-          <div className="vettedProjects">Vetted Projects<ProjectCard/></div>
-          <div className="roadMap">Raodmap<RoadmapCard/></div>
+        <div className="landing-row dark-gray-background">Who are Rugseekers</div>
+        <div className="landing-row white-background">Bloomberg</div>
+        <div className="landing-row dark-gray-background">
+          Yar Bounty Program
+          <LoginPanel />
+        </div>
+        <div className="landing-row gray-background">
+          Tokenomics
+          <TokenomicsPanel />
+        </div>
+        <div className="landing-row dark-gray-background">
+          Vetted Projects
+          <ProjectCard />
+        </div>
+        <div className="landing-row gray-background">
+          Raodmap
+          <RoadmapCard />
+        </div>
       </div>
     );
 

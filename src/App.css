@@ -45,20 +45,22 @@ nav{
 }
 
 .landing-row{
-  height: 100%
+  height: 100%;
+  width: 100%;
+  color: white
 }
 
 
-gray-background{
+.gray-background{
   background-color: rgb(77, 77, 77);
 }
 
 
-dark-gray-background{
+.dark-gray-background{
   background-color: rgb(51, 51, 51);
 }
 
-white-background{
+.white-background{
   background-color: white;
 }
 
