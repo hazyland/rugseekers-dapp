@@ -13,6 +13,12 @@ function Landing() {
 
       </div>
       <ul className="nav-links">
+        <li>
+          <Link to='/landing'>
+
+          Home
+          </Link>
+          </li>
         <li>Whiteaper</li>
         <li>Roadmap</li>
         <li>Tokenomics</li>
@@ -20,9 +26,11 @@ function Landing() {
         <li>VettedProjects</li>
         <li>Online Store</li>
         <li>How to Buy</li>
-        {/* <Link to='/Dapp'> */}
-        <li>Dapp</li>
-        {/* </Link> */}
+        <li>
+        <Link to='/Dapp'>
+          Dapp
+        </Link>
+        </li>
       </ul>
     </nav>
   );
