@@ -14,8 +14,8 @@ function Landing() {
     return (
       <div className="landing">
             <div className="landing-row row-1 dark-gray-background">
-                <div>
-                    <div>
+                <div className="landing-row-social-container" >
+                    <div className="col-2">
                         <div>Worlds first project to pay a "bounty" for tips the lead to stopping corruption.</div>
                         <div className="landing-header-1">Who are Rugseekers</div>
                         <div>We are a professional, diligent, and experienced team committed to helping eliminate fraud and corruption from the crypto space. The RugSeeker team was born out of our own experience with loss and is dedicated to rid investors of that very thing.</div>               
