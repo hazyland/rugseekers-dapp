@@ -16,7 +16,7 @@ function App() {
         <BrowserRouterProvider>
           <div className="column-2">
 
-          <Navigation></Navigation>
+            <Navigation></Navigation>
               <Web3Provider>
                 <Routes>
                     <Route path="/dapp" element={<Dapp />} />

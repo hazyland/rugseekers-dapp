@@ -4,17 +4,26 @@ import ProjectCard from './projectCard';
 import RoadmapCard from './roadmapCard';
 import TokenomicsPanel from './tokenomicsPanel';
 import KeyPointsSlide from './keyPointsSlide';
+import Social from './social'
 
-import bountyIMG from '../assets/icons8_pirates_of_the_caribbean_96px 1.png'
+import bountyIMG from '../assets/pirate.png'
 
 
 function Landing() {
     
     return (
       <div className="landing">
-            <div className="landing-row dark-gray-background">
-                <div className="landing-header-1">Who are Rugseekers</div>      
+            <div className="landing-row row-1 dark-gray-background">
+                <div>
+                    <div>
+                        <div>Worlds first project to pay a "bounty" for tips the lead to stopping corruption.</div>
+                        <div className="landing-header-1">Who are Rugseekers</div>
+                        <div>We are a professional, diligent, and experienced team committed to helping eliminate fraud and corruption from the crypto space. The RugSeeker team was born out of our own experience with loss and is dedicated to rid investors of that very thing.</div>               
+                    </div>
+                    <Social/>
+                </div>
                 <KeyPointsSlide />
+                
             </div>
             <div className="landing-row dark-gray-background">
                 <div className="landing-header-1">RugSeekers has been featured in</div>
