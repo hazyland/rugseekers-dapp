@@ -26,11 +26,12 @@ function Landing() {
         <li>VettedProjects</li>
         <li>Online Store</li>
         <li>How to Buy</li>
-        <li>
-        <Link to='/Dapp'>
+        <Link to='/' >
+          Main Website
+        </Link>
+        <Link to='/Dapp' >
           Dapp
         </Link>
-        </li>
       </ul>
     </nav>
   );
