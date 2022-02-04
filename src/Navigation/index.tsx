@@ -8,17 +8,13 @@ function Landing() {
   return (
     <nav>
       <div className="logo-container">
-        <img src={logo} height="80"width="80"></img>
+        <img src={logo} height="80" width="80"></img>
         <h4>RUG SEEKERS</h4>
-
       </div>
       <ul className="nav-links">
         <li>
-          <Link to='/landing'>
-
-          Home
-          </Link>
-          </li>
+          <Link to="/landing">Home</Link>
+        </li>
         <li>Whiteaper</li>
         <li>Roadmap</li>
         <li>Tokenomics</li>
@@ -27,9 +23,7 @@ function Landing() {
         <li>Online Store</li>
         <li>How to Buy</li>
         <li>
-        <Link to='/Dapp'>
-          Dapp
-        </Link>
+          <Link to="/Dapp">Dapp</Link>
         </li>
       </ul>
     </nav>
