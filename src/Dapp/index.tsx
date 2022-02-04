@@ -1,5 +1,10 @@
 import rugseekersLogo from "../assets/rug-logo-2.png";
 import giftIcon from "../assets/gift.png";
+import fireIcon from "../assets/fire.png";
+import burnFolderIcon from "../assets/burnFolder.png";
+import timerIcon from "../assets/timer.png";
+import membersIcon from "../assets/members.png";
+import coinbagIcon from "../assets/coinBag.png";
 import { ResponsiveImage } from "../lib/UI";
 import './dapp.css'
 
@@ -22,11 +27,13 @@ function Section(props: {icon: any, title: string, value: string}) {
         <div className="right" style={{
              height: "100%",
             //  width: "100%",
-            marginLeft: "1rem",
+            marginLeft: "0.5rem",
              justifySelf: "flex-start",
              display: "flex",
              alignItems: "center",
-             justifyContent: "center"
+             justifyContent: "center",
+             flexDirection: "column",
+             
         }}>
             <h5 style={{
                 margin: "0",
@@ -50,18 +57,32 @@ export default function Dapp() {
                 </div>
             </div>
             <div className="token-stats">
-                <h6>Rugseeker Token Stats</h6>
+                <h6 >Rugseeker Token Stats</h6>
                 <p>See how's our project doing.</p>
                 <br />
                 <div className="icons-container">
                     <div className="total-rewards-distributed">
                         <Section icon={giftIcon} title={"total rewards distributed"} value={"44 BNB"}/>
                     </div>
-                    <div className="liquidity-unlock-timer"></div>
-                    <div className="circulating-supply"></div>
-                    <div className="burned-tokens"></div>
-                    <div className="tokens-in-burn-vault"></div>
-                    <div className="holders"></div>
+                    <div className="liquidity-unlock-timer">
+                        <Section title="liquidity unlock timer" value="13d 10hr 12m" icon={timerIcon}/>
+                    </div>
+                    <div className="circulating-supply">
+                        <Section icon={coinbagIcon} title="circulating supply" value="890,808,445" />
+
+                    </div>
+                    <div className="burned-tokens">
+                    <Section icon={fireIcon} title="burned tokens" value="12,545,687" />
+
+                    </div>
+                    <div className="tokens-in-burn-vault">
+                    <Section icon={burnFolderIcon} title="tokens in burn vault" value="3,486,354" />
+
+                    </div>
+                    <div className="holders">
+                    <Section icon={membersIcon} title="holders" value="443" />
+
+                    </div>
                 </div>
             </div>
             <div className="token-rewards">
