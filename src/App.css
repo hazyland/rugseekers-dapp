@@ -79,9 +79,15 @@ nav{
 }
 
 
-.landing-row-social-container{
+.landing-row-1{
   display: grid;
   grid-template-columns: 18% 64% 18%;
+  height:300px
+}
+
+.landing-row-1-mobile{
+  display: grid;
+  grid-template-rows: 18% 82%;
   height:300px
 }
 
@@ -113,8 +119,8 @@ nav{
 }
 
 .socialWidget{
-  width: 50px;
-  height: 150px;
+  width: 75%;
+  height: 90%;
   background-color: rgb(62, 62, 255) ;
   border-radius: 5px;
   margin: 15%;
