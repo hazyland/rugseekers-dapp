@@ -1,12 +1,59 @@
+import rugseekersLogo from "../assets/rug-logo-2.png";
+import giftIcon from "../assets/gift.png";
+import { ResponsiveImage } from "../lib/UI";
+import './dapp.css'
+
+
+function Section(props: {icon: any, title: string, value: string}) {
+    return <div style={{
+        display: 'grid',
+        gridTemplateColumns: "30% 45%",
+        gridTemplateRows: "100%",
+        height: "100%",
+        width: "100%",
+        margin: "auto",
+    }}>
+        <div className="left" style={{
+            height: "100%",
+            width: "100%",
+        }}>
+            <ResponsiveImage src={props.icon}/>
+        </div>
+        <div className="right" style={{
+             height: "100%",
+            //  width: "100%",
+            marginLeft: "1rem",
+             justifySelf: "flex-start"
+        }}>
+            <h5 style={{
+                margin: "0",
+            }}>{props.title}</h5>
+            <p style={{
+                margin: "0",
+            }}>{props.value}</p>
+        </div>
+    </div>
+}
 export default function Dapp() {
     return (
         <div className="dapp">
+            <div className="top-banner">
+                <div className="image">
+                    <ResponsiveImage src={rugseekersLogo} />
+                </div>
+                <div>
+                    <h2>Rugseekers Rewards Dapp</h2>
+                    <p>We are a professional, diligent, and experienced </p>
+                </div>
+            </div>
             <div className="token-stats">
-                <h6>Rugseeker</h6>
+                <h6>Rugseeker Token Stats</h6>
                 <p>See how's our project doing.</p>
                 <br />
                 <div className="icons-container">
-                    <div className="total-rewards-distributed"></div>
+                    <div className="total-rewards-distributed">
+                        <Section icon={giftIcon} title={"total rewards distributed"} value={"44 BNB"}/>
+                    </div>
                     <div className="liquidity-unlock-timer"></div>
                     <div className="circulating-supply"></div>
                     <div className="burned-tokens"></div>

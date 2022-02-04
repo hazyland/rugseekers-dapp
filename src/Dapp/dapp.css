@@ -1,0 +1,45 @@
+.dapp {
+    background-color: aliceblue;
+    color: black;
+}
+.top-banner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+    grid-auto-rows: minmax(300px, auto);
+}
+.top-banner .image {
+    height: 100%;
+    width: 100%;
+}
+
+.token-stats {
+    width: 98%;
+    height: auto;
+    margin: auto;
+    background-color: rgb(55, 55, 61);
+    border-radius: 6px;
+    padding: 0.3rem;
+}
+.token-stats > h6 {
+    color: yellow;
+}
+.token-stats > p {
+    /* color: yellow; */
+}
+ .token-stats .icons-container {
+    width: 98%;
+    display: grid;
+    margin: auto;
+
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+
+    background-color: rgb(116, 116, 207);
+}
+ .token-stats .icons-container > div{
+    width: 98%;
+    height: 98%;
+    align-self: center;
+    justify-self: center;
+    background-color: thistle;
+}
