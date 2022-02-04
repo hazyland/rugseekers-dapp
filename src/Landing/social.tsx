@@ -7,6 +7,8 @@ import discord from '../assets/discord.png'
 
 export default function Social() {
   return (
+    <div className="socialWidget-container">
+
     <div className="socialWidget">
       <div className="social-icon-container">
         <img src={twiter}></img>
@@ -20,6 +22,7 @@ export default function Social() {
       <div className="social-icon-container">
         <img src={facebook}></img>
       </div>
+    </div>
     </div>
   );
 }

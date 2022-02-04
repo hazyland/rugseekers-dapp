@@ -79,9 +79,16 @@ nav{
 }
 
 
-.landing-row-social-container{
+.landing-row-1{
   display: grid;
   grid-template-columns: 18% 64% 18%;
+  height:300px
+}
+
+.landing-row-1-mobile{
+  display: grid;
+  grid-template-rows: 18% 82%;
+  height:300px
 }
 
 
@@ -112,11 +119,12 @@ nav{
 }
 
 .socialWidget{
-  width: 50px;
-  height: 150px;
+  width: 75%;
+  height: 90%;
   background-color: rgb(62, 62, 255) ;
   border-radius: 5px;
-  margin: 10px;
+  margin: 15%;
+  align-self: center;
   /* position: absolute;
   top: +150px;
   left: +200px; */
@@ -128,9 +136,17 @@ nav{
   grid-template-columns: 33.33% 33.33% 33.33%;
   align-items: center;
   color: black;
+  height:325px
 }
 
 .floating-logo{
   position:relative;
   top: -88px;
+}
+
+.socialWidget-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
 }
