@@ -1,6 +1,6 @@
 .app {
   text-align: center;
-  background-color: white;
+  background-color: black;
   width: 100%;
   color: white
 }
@@ -9,7 +9,7 @@
   text-align: center;
   display: grid;
   grid-template-columns: 0vw 100vw 0vw;
-  background-color: white;
+  background-color: black;
   width: 100%;
   color: white
 }
@@ -88,14 +88,43 @@ nav{
 .landingRow-1{
   display: grid;
   grid-template-columns: 15% 70% 15%;
-  height:300px
+  height:auto
 }
 
 .landingRow-1-mobile{
   display: grid;
   grid-template-rows: 18% 82%;
-  height:300px
+  height:auto
 }
+
+
+
+
+.landingRow2{
+  /* background-color: white;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  align-items: center;
+  color: black;
+  height:auto */
+
+    margin-top: 1rem;
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-auto-rows: minmax(1rem, auto);
+    /* gap: 1rem 5%; */
+    align-items: center;
+    background-color: white;
+    color: black;
+    min-height: 350px;
+
+
+
+}
+
+
 
 
 
@@ -126,11 +155,13 @@ nav{
 
 
 .who-is-mobile{
-
+margin: 10px;
+padding: 10px;
 }
 
 .who-is{
-
+margin: 10px;
+padding: 10px;
 }
 
 
@@ -188,19 +219,16 @@ nav{
 
 
 
-
-.landingRow2{
-  background-color: white;
-  display: grid;
-  grid-template-columns: 33.33% 33.33% 33.33%;
-  align-items: center;
-  color: black;
-  height:325px
-}
-
 .floating-logo{
   position:relative;
   top: -88px;
+}
+
+.keyPointSlide{
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 
