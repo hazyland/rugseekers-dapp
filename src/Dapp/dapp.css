@@ -13,12 +13,13 @@
 }
 
 .token-stats {
-    width: 98%;
+    width: calc(99.6% - 4rem);
     height: auto;
     margin: auto;
     background-color: rgb(55, 55, 61);
     border-radius: 6px;
-    padding: 0.3rem;
+    padding: 0.5rem 1.7rem;
+    box-sizing: content-box;
 }
 .token-stats > h6 {
     color: yellow;
@@ -26,46 +27,105 @@
 .token-stats > p {
     /* color: yellow; */
 }
- .token-stats .icons-container {
+.token-stats .icons-container {
     width: 98%;
     display: grid;
     margin: auto;
 
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: minmax(100px, auto);
-
-    background-color: rgb(116, 116, 207);
+    color: white;
+    text-transform: uppercase;
 }
- .token-stats .icons-container > div {
+.token-stats .icons-container img{
+    border-radius: 50%;
+    background-color: rgb(114, 109, 109);
+}
+.token-stats .icons-container > div {
     width: 50%;
     height: 98%;
     align-self: center;
     justify-self: center;
-    background-color: thistle;
+}
+
+.section-3 {
+    margin-top: 1rem;
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /* grid-auto-rows: minmax(100px, auto); */
+    gap: 1rem 5%;
+}
+.section-3 p, h6{
+    margin: 0;
 }
 
 .token-rewards {
+    /* box-sizing: content-box; */
+    margin-top: 1rem;
     border-radius: 6px;
-    width: 48%;
-    margin: 20px 0 0 2%;
+    width: 100%;
+    margin: auto;
     padding: 1rem;
     background-color: grey;
+    padding: 0.5rem 1.7rem;
+    width: 99%
 }
-.token-rewards > h6, p {
+.token-rewards > h6,
+p {
     text-align: left;
+}
+.claimable-rewards-2 img{
+    border-radius: 45%;
+    background-color: rgb(75, 73, 73);
 }
 
 .token-rewards .balance-container {
-    
 }
 .token-rewards .balance-container .seek-balance {
     width: 100%;
+    height: 80px;
     display: flex;
 }
 .token-rewards .balance-container .claimable-rewards {
+    height: 80px;
     width: 100%;
     display: flex;
 }
 .token-rewards .balance-container > div > * {
     display: block;
+}
+.promotional-token {
+    justify-self: flex-end;
+    margin-right: 0%;
+    margin: auto;
+    border-radius: 6px;
+    background-color: grey;
+    padding: 0.5rem 1.7rem;
+    height: min-content;
+    width: 99%
+}
+
+.promotional-token .promo-token-1 {
+    height: 80px;
+}
+.footer {
+    margin-top: 2rem;
+    background-color: grey;
+}
+
+.claimable-rewards {
+    
+}
+.claim-rewards-as {
+height: 40px;
+background-color: honeydew;
+height: 1.7rem;
+}
+.claim-rewards {
+    height: 40px;
+background: wheat;
+width: 50%;
+height: 1.5rem;
 }

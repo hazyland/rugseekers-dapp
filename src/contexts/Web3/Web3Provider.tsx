@@ -182,6 +182,7 @@ export default function Web3Provider({ children }: PropsWithChildren<any>) {
       cacheProvider: true, // optional
       providerOptions, // required
     });
+    
     if (web3Modal.cachedProvider) {
       const provider = web3Modal.connect();
     }

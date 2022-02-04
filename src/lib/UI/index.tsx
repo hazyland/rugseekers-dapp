@@ -10,3 +10,13 @@ export function ResponsiveImage(props: {src: string}) {
     );
   }
   
+  export function Divider() {
+   return  <div style={{
+      height: "2px",
+      width: "100%",
+      background: "white",
+      margin: "3px 0",   
+    }}>
+
+    </div>
+  }

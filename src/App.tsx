@@ -50,7 +50,7 @@ function App() {
   return (
     <div className={AppState.appDimensions.innerWidth <= 500 ? "app-mobile" : "app"}>
       <BrowserRouterProvider>
-        <div className="col-2">
+        <div className="col-2 content-lane">
           <Web3Provider>
           <Navigation></Navigation>
             <Routes>
