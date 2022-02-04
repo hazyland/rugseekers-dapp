@@ -7,7 +7,7 @@ import './dapp.css'
 function Section(props: {icon: any, title: string, value: string}) {
     return <div style={{
         display: 'grid',
-        gridTemplateColumns: "30% 45%",
+        gridTemplateColumns: "25% 75%",
         gridTemplateRows: "100%",
         height: "100%",
         width: "100%",
@@ -23,7 +23,10 @@ function Section(props: {icon: any, title: string, value: string}) {
              height: "100%",
             //  width: "100%",
             marginLeft: "1rem",
-             justifySelf: "flex-start"
+             justifySelf: "flex-start",
+             display: "flex",
+             alignItems: "center",
+             justifyContent: "center"
         }}>
             <h5 style={{
                 margin: "0",
