@@ -18,11 +18,9 @@ function App() {
   const AppState = useAppProvider()
   const AppDispatch = useAppProviderDispatch()
 
-  // const windowDimensions = useWindowDimensions()
-  // console.log(AppState.appDimensions.innerWidth)
+
 
     return (
-      // <AppProvider>
       <div className={AppState.appDimensions.innerWidth <= 500 ? "app-mobile" : "app"}>
         <BrowserRouterProvider>
           <div className="column-2">
@@ -36,7 +34,6 @@ function App() {
           </div>
         </BrowserRouterProvider>
       </div>
-      // </AppProvider>
     );
 }
 
