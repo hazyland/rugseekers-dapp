@@ -7,6 +7,7 @@ import membersIcon from "../assets/members.png";
 import coinbagIcon from "../assets/coinBag.png";
 import { ResponsiveImage } from "../lib/UI";
 import './dapp.css'
+import { useWeb3ProviderState } from "../contexts/Web3/Web3Provider";
 
 
 function Section(props: {icon: any, title: string, value: string}) {
@@ -45,6 +46,8 @@ function Section(props: {icon: any, title: string, value: string}) {
     </div>
 }
 export default function Dapp() {
+    const w3State = useWeb3ProviderState();
+    console.log('w3State',w3State,);
     return (
         <div className="dapp">
             <div className="top-banner">
