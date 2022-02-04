@@ -36,8 +36,8 @@
 
     background-color: rgb(116, 116, 207);
 }
- .token-stats .icons-container > div{
-    width: 98%;
+ .token-stats .icons-container > div {
+    width: 50%;
     height: 98%;
     align-self: center;
     justify-self: center;
