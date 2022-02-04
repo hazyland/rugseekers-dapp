@@ -4,7 +4,7 @@
 }
 .top-banner {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     grid-auto-rows: minmax(300px, auto);
 }
 .top-banner .image {
@@ -31,7 +31,7 @@
     display: grid;
     margin: auto;
 
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
     grid-auto-rows: minmax(100px, auto);
 
     background-color: rgb(116, 116, 207);

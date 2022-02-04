@@ -298,6 +298,16 @@ module.exports = function (webpackEnv) {
       modules: ['node_modules', paths.appNodeModules].concat(
         modules.additionalModulePaths || []
       ),
+      fallback: {
+        "stream": require.resolve("stream-browserify"),
+        "util": require.resolve("util"),
+        "http": require.resolve("stream-http"),
+        "https": require.resolve("https-browserify"),
+        "os": require.resolve("os-browserify"),
+        "url": require.resolve("url"),
+        "assert": require.resolve("assert"),
+        "buffer": require.resolve("buffer")
+      },
       // These are the reasonable defaults supported by the Node ecosystem.
       // We also include JSX as a common component filename extension to support
       // some tools, although we do not recommend using it, see:
@@ -745,6 +755,9 @@ module.exports = function (webpackEnv) {
             },
           },
         }),
+        new webpack.ProvidePlugin({
+          Buffer: [require.resolve("buffer/"), "Buffer"],
+      }),
     ].filter(Boolean),
     // Turn off performance processing because we utilize
     // our own hints via the FileSizeReporter

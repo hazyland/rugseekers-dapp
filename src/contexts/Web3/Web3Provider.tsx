@@ -2,9 +2,16 @@ import {
   createContext,
   PropsWithChildren,
   useContext,
+  useEffect,
   useReducer,
 } from "react";
-import { utils } from "ethers";
+// import RUGSEEKER_ABI from '../../assets/rugseekerABI.json'
+import RUGSEEKER_ABI from '../../assets/EagleEyeABI.json'
+import { ethers, utils } from "ethers";
+import WalletConnectProvider from "@walletconnect/web3-provider";
+import Web3Modal from "web3modal";
+export const RUGSEEKER_ADDRESS = '0x4e6a510659d3d0F6897bbab3Db67DA0B3d001fB7';
+export const NODE_URL = "https://bsc-dataseed.binance.org/";
 interface Web3State {
   currentWallet: string | "";
   web3Provider: any
@@ -129,10 +136,70 @@ function reducer(state: Web3State, action: Action) {
 
   }
 }
+async function initWeb3(web3Dispatch: any) {
+  const provider = new ethers.providers.JsonRpcProvider(NODE_URL);
 
+  const EagleEyeContract = new ethers.Contract(
+    // DOBO_BNB_LP_ADDRESS,
+    RUGSEEKER_ADDRESS,
+    RUGSEEKER_ABI,
+    provider
+  );
+  web3Dispatch({ type: "UPDATE_WEB3_PROVIDER", payload: provider });
+
+  web3Dispatch({ type: "UPDATE_CURRENT_CONTRACT", payload: EagleEyeContract });
+  const totalRewards = await EagleEyeContract.totalRewardBNBPaid();
+
+  web3Dispatch({ type: "UPDATE_TOTAL_REWARDS", payload: totalRewards });
+  const totalSupply = await EagleEyeContract.totalSupply();
+  web3Dispatch({ type: "UPDATE_SUPPLY", payload: totalSupply.toString() });
+  const tokensBurned = await EagleEyeContract.totalTokensBurned();
+  web3Dispatch({ type: "UPDATE_TOTAL_BURNED", payload: tokensBurned });
+  const tokensToBurn = await EagleEyeContract.tokensToBurn();
+  web3Dispatch({ type: "UPDATE_TOKENS_TO_BURN", payload: tokensToBurn });
+  const timeLeft = await EagleEyeContract.liquidityUnlockTimeLeft();
+  web3Dispatch({ type: "UPDATE_TIME", payload: timeLeft.toString() });
+  const taxes = await EagleEyeContract.allTaxes();
+}
 export default function Web3Provider({ children }: PropsWithChildren<any>) {
   const [state, dispatch] = useReducer(reducer, initalState as never);
-
+  useEffect(() => {
+    const providerOptions = {
+      walletconnect: {
+        package: WalletConnectProvider, // required
+        options: {
+          rpc: {
+            "56": NODE_URL,
+          },
+          chainId: 56,
+          supportedChainIds: [56],
+          network: "binance",
+          bridge: "https://bridge.walletconnect.org", // Required
+        },
+      },
+    };
+    const web3Modal = new Web3Modal({
+      network: "mainnet", // optional
+      cacheProvider: true, // optional
+      providerOptions, // required
+    });
+    if (web3Modal.cachedProvider) {
+      const provider = web3Modal.connect();
+    }
+    web3Modal.on("connect", async (provider) => {
+      dispatch({ type: "UPDATE_WALLET_PROVIDER", payload: provider });
+      const accounts = await provider.request({ method: "eth_accounts" });
+      dispatch({ type: "UPDATE_CURRENT_WALLET", payload: accounts[0] });
+    });
+    if (web3Modal.cachedProvider) {
+      // const accounts = await provider.request({method: 'eth_accounts'});
+      // web3Dispatch({type: "UPDATE_CURRENT_WALLET", payload: accounts[0]})
+    } else {
+      // not cache
+    }
+    dispatch({ type: "UPDATE_WEB3_MODAL", payload: web3Modal });
+    initWeb3(dispatch);
+  }, []);
   return (
     <Web3DispatchContext.Provider value={dispatch}>
       <Web3StateContext.Provider value={state}>
