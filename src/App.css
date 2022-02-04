@@ -1,7 +1,15 @@
 .app {
   text-align: center;
   display: grid;
-  grid-template-columns: 15vw 70vw 15vw;
+  grid-template-columns: 5vw 90vw 5vw;
+  background-color: black;
+  width: 100%;
+}
+
+.app-mobile {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 0vw 100vw 0vw;
   background-color: black;
   width: 100%;
 }
@@ -28,18 +36,19 @@ nav{
   justify-content: space-around;
   align-items: center;
   height: 10vh;
-  min-height: 10vh;
+  min-height: 90px;
   background-color: rgb(62, 62, 255) ;
   color: white;
   grid-column-start: 2;
 }
 
 .nav-links{
-  width: 50%;
+  width: 70%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .logo-container{
