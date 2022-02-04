@@ -7,7 +7,8 @@ import membersIcon from "../assets/members.png";
 import coinbagIcon from "../assets/coinBag.png";
 import { ResponsiveImage } from "../lib/UI";
 import './dapp.css'
-import { useWeb3ProviderState } from "../contexts/Web3/Web3Provider";
+import { useWeb3ProviderDispatch, useWeb3ProviderState } from "../contexts/Web3/Web3Provider";
+import { useEffect } from "react";
 
 
 function Section(props: {icon: any, title: string, value: string}) {
@@ -47,6 +48,33 @@ function Section(props: {icon: any, title: string, value: string}) {
 }
 export default function Dapp() {
     const w3State = useWeb3ProviderState();
+    const web3Dispatch = useWeb3ProviderDispatch();
+    async function getUserData() {
+        console.log("user balance");
+        if (w3State.currentContract && w3State.currentWallet) {
+          const balance = await w3State.currentContract.balanceOf(
+            w3State.currentWallet
+          );
+          const rewards = await w3State.currentContract.rewardsOf(
+            w3State.currentWallet
+          );
+          const nextSell = await w3State.currentContract.nextSellOf(
+            w3State.currentWallet
+          );
+    
+          web3Dispatch({ type: "UPDATE_USER_TOKEN_BALANCE", payload: balance });
+          web3Dispatch({ type: "UPDATE_USER_TOTAL_REWARDS", payload: rewards });
+        }
+      }
+      useEffect(() => {
+        getUserData();
+        const interval = setInterval(() => {
+            getUserData()
+        }, 30000)
+        return () => {
+            clearInterval(interval);
+        }
+      }, [w3State.currentWallet, w3State.currentContract]);
     console.log('w3State',w3State,);
     return (
         <div className="dapp">
@@ -65,21 +93,21 @@ export default function Dapp() {
                 <br />
                 <div className="icons-container">
                     <div className="total-rewards-distributed">
-                        <Section icon={giftIcon} title={"total rewards distributed"} value={"44 BNB"}/>
+                        <Section icon={giftIcon} title={"total rewards distributed"} value={`${w3State.totalRewards} BNB`}/>
                     </div>
                     <div className="liquidity-unlock-timer">
-                        <Section title="liquidity unlock timer" value="13d 10hr 12m" icon={timerIcon}/>
+                        <Section title="liquidity unlock timer" value={`${w3State.timeLeftHours}D ${w3State.timeLeftHours}HR ${w3State.timeLeftSeconds}M` }icon={timerIcon}/>
                     </div>
                     <div className="circulating-supply">
-                        <Section icon={coinbagIcon} title="circulating supply" value="890,808,445" />
+                        <Section icon={coinbagIcon} title="circulating supply" value={w3State.totalSupply.toString()} />
 
                     </div>
                     <div className="burned-tokens">
-                    <Section icon={fireIcon} title="burned tokens" value="12,545,687" />
+                    <Section icon={fireIcon} title="burned tokens" value={w3State.tokensBurned.toString()} />
 
                     </div>
                     <div className="tokens-in-burn-vault">
-                    <Section icon={burnFolderIcon} title="tokens in burn vault" value="3,486,354" />
+                    <Section icon={burnFolderIcon} title="tokens in burn vault" value={w3State.tokensToBurn.toString()} />
 
                     </div>
                     <div className="holders">
@@ -90,10 +118,18 @@ export default function Dapp() {
             </div>
             <div className="token-rewards">
                 <h6>Rugseeker</h6>
-                <p>See how's our project doing.</p>
+                <p>get your tokens rewards as BNB. $Seek or any BEP20 token.</p>
                 <br />
-                <div className="seek-balance"></div>
-                <div className="claimable-rewards"></div>
+                <div className="balance-container">
+                <div className="seek-balance">
+                    <h6>$Seek Balance</h6>
+                    <p>134534</p>
+                </div>
+                <div className="claimable-rewards">
+                    <h6>Claimable Rewards</h6>
+                    <p>134534</p>
+                </div>
+                </div>
                 <br />
                 <div className="claimable-rewards">
                     Select one option below in which form would you like to receive your rewards.

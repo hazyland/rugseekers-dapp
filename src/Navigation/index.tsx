@@ -1,10 +1,12 @@
 import React from "react";
-// import "./App.css";
 import { BrowserRouter as BrowserRouterProvider, Route, Routes } from "react-router-dom";
 import { Link } from 'react-router-dom'
 import logo from '../assets/rug-logo 2.png'
+import { ConnectWalletButton } from "../components/ConnectWalletButton";
+import { useWeb3ProviderState } from "../contexts/Web3/Web3Provider";
 
-function Landing() {
+function Navigation() {
+  const web3State = useWeb3ProviderState();
   return (
     <nav>
       <div className="logo-container">
@@ -28,9 +30,10 @@ function Landing() {
         <Link to='/Dapp' >
           Dapp
         </Link>
+        <ConnectWalletButton />
       </ul>
     </nav>
   );
 }
 
-export default Landing;
+export default Navigation;

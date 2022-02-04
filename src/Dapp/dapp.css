@@ -31,7 +31,7 @@
     display: grid;
     margin: auto;
 
-    grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: minmax(100px, auto);
 
     background-color: rgb(116, 116, 207);
@@ -42,4 +42,30 @@
     align-self: center;
     justify-self: center;
     background-color: thistle;
+}
+
+.token-rewards {
+    border-radius: 6px;
+    width: 48%;
+    margin: 20px 0 0 2%;
+    padding: 1rem;
+    background-color: grey;
+}
+.token-rewards > h6, p {
+    text-align: left;
+}
+
+.token-rewards .balance-container {
+    
+}
+.token-rewards .balance-container .seek-balance {
+    width: 100%;
+    display: flex;
+}
+.token-rewards .balance-container .claimable-rewards {
+    width: 100%;
+    display: flex;
+}
+.token-rewards .balance-container > div > * {
+    display: block;
 }

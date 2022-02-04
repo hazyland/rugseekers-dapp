@@ -145,21 +145,20 @@ async function initWeb3(web3Dispatch: any) {
     RUGSEEKER_ABI,
     provider
   );
+  const [totalRewards, totalSupply, tokensBurned, tokensToBurn, timeLeft] = await Promise.all([EagleEyeContract.totalRewardBNBPaid(),EagleEyeContract.totalSupply(), EagleEyeContract.totalTokensBurned(), EagleEyeContract.tokensToBurn(), EagleEyeContract.liquidityUnlockTimeLeft()])
   web3Dispatch({ type: "UPDATE_WEB3_PROVIDER", payload: provider });
-
   web3Dispatch({ type: "UPDATE_CURRENT_CONTRACT", payload: EagleEyeContract });
-  const totalRewards = await EagleEyeContract.totalRewardBNBPaid();
+  // const totalRewards = await EagleEyeContract.totalRewardBNBPaid();
   console.log('totalRewards',totalRewards,);
   web3Dispatch({ type: "UPDATE_TOTAL_REWARDS", payload: totalRewards });
-  const totalSupply = await EagleEyeContract.totalSupply();
+  // const totalSupply = await EagleEyeContract.totalSupply();
   web3Dispatch({ type: "UPDATE_SUPPLY", payload: totalSupply.toString() });
-  const tokensBurned = await EagleEyeContract.totalTokensBurned();
+  // const tokensBurned = await EagleEyeContract.totalTokensBurned();
   web3Dispatch({ type: "UPDATE_TOTAL_BURNED", payload: tokensBurned });
-  const tokensToBurn = await EagleEyeContract.tokensToBurn();
+  // const tokensToBurn = await EagleEyeContract.tokensToBurn();
   web3Dispatch({ type: "UPDATE_TOKENS_TO_BURN", payload: tokensToBurn });
-  const timeLeft = await EagleEyeContract.liquidityUnlockTimeLeft();
+  // const timeLeft = await EagleEyeContract.liquidityUnlockTimeLeft();
   web3Dispatch({ type: "UPDATE_TIME", payload: timeLeft.toString() });
-  const taxes = await EagleEyeContract.allTaxes();
 }
 export default function Web3Provider({ children }: PropsWithChildren<any>) {
   const [state, dispatch] = useReducer(reducer, initalState as never);
