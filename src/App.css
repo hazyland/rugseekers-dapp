@@ -1,6 +1,6 @@
 .app {
   text-align: center;
-  background-color: black;
+  background-color: white;
   width: 100%;
   color: white
 }
@@ -9,7 +9,7 @@
   text-align: center;
   display: grid;
   grid-template-columns: 0vw 100vw 0vw;
-  background-color: black;
+  background-color: white;
   width: 100%;
   color: white
 }
@@ -18,7 +18,7 @@
   grid-column: 2;
 }
 .content-lane {
-  padding: 1rem;
+  padding: 0 7rem;
 }
 .col-3 {
   grid-column: 3;
@@ -201,4 +201,22 @@ nav{
 .floating-logo{
   position:relative;
   top: -88px;
+}
+
+
+@media only screen and (max-width: 599px) {
+  html {
+    font-size: 94%;
+  }
+  .content-lane {
+    padding: 1rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  html {
+    font-size: 87%;
+  }
+  .content-lane {
+    padding: 1rem;
+  }
 }
