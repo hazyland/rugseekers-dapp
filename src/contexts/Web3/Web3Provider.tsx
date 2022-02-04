@@ -149,7 +149,7 @@ async function initWeb3(web3Dispatch: any) {
 
   web3Dispatch({ type: "UPDATE_CURRENT_CONTRACT", payload: EagleEyeContract });
   const totalRewards = await EagleEyeContract.totalRewardBNBPaid();
-
+  console.log('totalRewards',totalRewards,);
   web3Dispatch({ type: "UPDATE_TOTAL_REWARDS", payload: totalRewards });
   const totalSupply = await EagleEyeContract.totalSupply();
   web3Dispatch({ type: "UPDATE_SUPPLY", payload: totalSupply.toString() });
