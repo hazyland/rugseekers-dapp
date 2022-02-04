@@ -26,8 +26,8 @@ function App() {
       <div className={AppState.appDimensions.innerWidth <= 500 ? "app-mobile" : "app"}>
         <BrowserRouterProvider>
           <div className="column-2">
-            <Navigation></Navigation>
             <Web3Provider>
+            <Navigation></Navigation>
               <Routes>
                 <Route path="/dapp" element={<Dapp />} />
                 <Route path="/landing" element={<Landing />} />
