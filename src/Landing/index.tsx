@@ -20,7 +20,9 @@ function Landing() {
                         <div className="landing-header-1">Who are Rugseekers</div>
                         <div>We are a professional, diligent, and experienced team committed to helping eliminate fraud and corruption from the crypto space. The RugSeeker team was born out of our own experience with loss and is dedicated to rid investors of that very thing.</div>               
                     </div>
+                    <div>
                     <Social/>
+                    </div>
                 </div>
                 <KeyPointsSlide />
                 

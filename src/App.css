@@ -71,17 +71,20 @@ nav{
   height: 250px;
   width: 100%;
   color: white
+  
 }
 
 .row-1{
-  height: 400px
+  min-height: 600px
 }
 
 
 .landing-row-social-container{
   display: grid;
-  grid-template-columns: 5% 90% 5%;
+  grid-template-columns: 18% 64% 18%;
 }
+
+
 
 
 .landing-header-1{
