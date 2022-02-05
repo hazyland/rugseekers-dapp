@@ -73,7 +73,24 @@ function Landing() {
           <ProjectCards />
         </div>
           <RoadmapCards />
-      
+        <div className="footer">
+          <div className="quick-links">
+            <a>Whitepaper</a>
+            <a>Roadmap</a>
+            <a>Tokenomics</a>
+            <a>Reflection</a>
+            <a>Vetted Projects</a>
+            <a>Online Store</a>
+            <a>How to Buy</a>
+            <a>Buy Crypto</a>
+          </div>
+
+          <div>
+            <h4>Contact Us</h4>
+            <a>RugSeekers@gmail.com</a>
+            <p>Copyright Rugseekers 2022 - All Rights Reserved</p>
+          </div>
+        </div>
       </div>
     );
 
