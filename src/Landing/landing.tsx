@@ -22,7 +22,7 @@
 
 
 import landing from "./landing";
-import LoginPanel from "./contactPanel";
+import ContactPanel from "./contactPanel";
 import ProjectCard from "./projectCard";
 import RoadmapCard from "./roadmapCard";
 import TokenomicsPanel from "./tokenomicsPanel";
@@ -34,7 +34,10 @@ function Landing() {
       <div className="landing-row">Bloomberg</div>
       <div className="landing-row">
         Yar Bounty Program
-        <LoginPanel />
+        <div className="contactPanelContainer">
+        <ContactPanel />
+
+        </div>
       </div>
       <div className="landing-row">
         Tokenomics
