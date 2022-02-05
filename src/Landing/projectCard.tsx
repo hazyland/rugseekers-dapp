@@ -8,39 +8,37 @@ export default function ProjectCard() {
   const vettedProjects = [{projectName:"Project Name Here", rating:93.5},{projectName:"Project Name Here", rating:93.5},{projectName:"Project Name Here", rating:93.5},{projectName:"Project Name Here", rating:93.5},{projectName:"Project Name Here", rating:93.5},{projectName:"Project Name Here", rating:93.5},{projectName:"Project Name Here", rating:93.5}]
   
   return (
-    <div className="landingRow5">
-      <div className="projectCards">
+    <div className="landingRow6">
         <div className="projectCard">
           <div><img src={project} height="80" width="80"></img></div>
           <div>Project Name Goes Here</div>
-          <div>93.5</div>
+          <div className="score">93.5</div>
         </div>
         <div className="projectCard">
           <div><img src={project} height="80" width="80"></img></div>
           <div>Project Name Goes Here</div>
-          <div>93.5</div>
+          <div className="score">93.5</div>
         </div>
         <div className="projectCard">
           <div><img src={project} height="80" width="80"></img></div>
           <div>Project Name Goes Here</div>
-          <div>93.5</div>
+          <div className="score">93.5</div>
         </div>
         <div className="projectCard">
           <div><img src={project} height="80" width="80"></img></div>
           <div>Project Name Goes Here</div>
-          <div>93.5</div>
+          <div className="score">93.5</div>
         </div>
         <div className="projectCard">
           <div><img src={project} height="80" width="80"></img></div>
           <div>Project Name Goes Here</div>
-          <div>93.5</div>
+          <div className="score">93.5</div>
         </div>
         <div className="projectCard">
           <div><img src={project} height="80" width="80"></img></div>
           <div>Project Name Goes Here</div>
-          <div>93.5</div>
+          <div className="score">93.5</div>
         </div>
-      </div>
     </div>
   );
 }
