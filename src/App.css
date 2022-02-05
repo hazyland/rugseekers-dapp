@@ -87,7 +87,8 @@ ul{
 .landingRow-1{
   display: grid;
   grid-template-columns: 15% 70% 15%;
-  height:auto
+  height:auto;
+  min-height: 250px
 }
 
 .landingRow-1-mobile{
@@ -462,4 +463,11 @@ display: flex;
 
 .lane-padding {
   padding: 1rem 5rem;
+}
+
+
+#grad1 {
+  height: 200px;
+  background-color: black; /* For browsers that do not support gradients */
+  background-image: linear-gradient(rgb(51, 51, 51) 51%, white 49%);
 }
