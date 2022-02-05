@@ -53,6 +53,7 @@ display: block;
 }
 .sliding-panel .nav-links a {
   margin-top: 1rem;
+  margin-left: 4rem;
 }
 
 .sliding-panel {
