@@ -19,6 +19,14 @@ const phaseItems = [
             emoji: "✅",
             text: "sample text",
         },
+        {
+            emoji: "✅",
+            text: "sample text sample text text ",
+        },
+        {
+            emoji: "✅",
+            text: "sample text sample text sample text v sample text sample text",
+        },
     ],
     //Phase 2
     [
@@ -81,12 +89,17 @@ const phaseItems = [
 function PhaseBox(props: { index: number; items: any[] }) {
     return (
         <div className="phase-box">
-            <p>Phase {props.index + 1}</p>
+            <p style={{
+                color: "orange",
+                fontWeight: "bold"
+            }}>Phase {props.index + 1}</p>
             {props.items.map((item) => {
                 return (
                     <div className="phase-item">
                         <div className="emoji">{item.emoji}</div>
-                        <div className="text">{item.text}</div>
+                        <div className="text" style={{
+                            marginLeft: "4px"
+                        }}>{item.text}</div>
                     </div>
                 );
             })}
@@ -96,7 +109,7 @@ function PhaseBox(props: { index: number; items: any[] }) {
 
 export default function RoadmapCard() {
     return (
-        <div className="roadmapCard card gray-background">
+        <div className="roadmapCard card dark-gray-background lane-padding">
             <h1>Roadmap</h1>
             <div className="phases">
                 {phaseItems.map((phase, index) => {

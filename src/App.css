@@ -380,8 +380,8 @@ padding: 10px;
 }
 .phases {
   display: grid;
-  padding: 0 5rem;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
 }
 .phase-box {
   background-color: white;
@@ -395,8 +395,10 @@ padding: 10px;
   align-self: center;
   padding: 1rem;
   /* margin: 1rem; */
+  height: min-content;
   border-radius: 6px;
   justify-self: center;
+  align-self: flex-start;
 }
 .phase-box > p {
 margin: 0;
@@ -404,4 +406,8 @@ margin: 0;
 }
 .phase-box .phase-item {
 display: flex;
+}
+
+.lane-padding {
+  padding: 1rem 5rem;
 }
