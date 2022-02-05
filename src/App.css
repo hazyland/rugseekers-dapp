@@ -147,7 +147,7 @@
 }
 
 .landing-header-2{
-  color: orange;
+  color: rgb(169,115,16);
     font-size: 10pt;
   font-weight: bold;
 }
@@ -158,7 +158,7 @@
 }
 
 .dark-gray-background{
-  background-color: rgb(51, 51, 51);
+  background-color: rgb(38, 38, 38);
   width: 100%;
 }
 
@@ -200,7 +200,7 @@ padding: 10px;
 
 .socialWidget{
   width: 100%;
-  background-color: rgb(62, 62, 255) ;
+  background-color: rgb(13, 84, 190) ;
   border-radius: 5px;
   margin: 15px;
   align-self: center;
@@ -213,7 +213,7 @@ padding: 10px;
 
 .socialWidget-mobile{
   width: 100%;
-  background-color: rgb(62, 62, 255) ;
+  background-color: rgb(13, 84, 190) ;
   border-radius: 5px;
   margin: 15px;
   align-self: center;
@@ -461,5 +461,5 @@ display: flex;
 #grad1 {
   height: 200px;
   background-color: black; /* For browsers that do not support gradients */
-  background-image: linear-gradient(rgb(51, 51, 51) 51%, white 49%);
+  background-image: linear-gradient(rgb(38, 38, 38) 51%, white 49%);
 }
