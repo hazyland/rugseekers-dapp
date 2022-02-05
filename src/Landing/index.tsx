@@ -21,22 +21,22 @@ function Landing() {
 
     return (
       <div className="landing">
-          <div className={AppState.appDimensions.innerWidth <= 500 ? "landingRow-1-mobile" : "landingRow-1"}>
-            <div className={"who-is " + (AppState.appDimensions.innerWidth <= 500 ? "row-2" : "col-2")}>
-              <div>
-                <h3>Worlds first project to pay a "bounty" for tips the lead to stopping corruption.</h3>
-                <div className="landing-header-1">Who are RugSeekers?</div>
-                <div>We are a professional, diligent, and experienced team committed to helping eliminate fraud and corruption from the crypto space. The RugSeeker team was born out of our own experience with loss and is dedicated to rid investors of that very thing.</div>
-              </div>
+        <div className={AppState.appDimensions.innerWidth <= 500 ? "landingRow-1-mobile dark-gray-background" : "landingRow-1 dark-gray-background"}>
+          <div className={"who-is " + (AppState.appDimensions.innerWidth <= 500 ? "row-2" : "col-2")}>
+            <div>
+              <h3>Worlds first project to pay a "bounty" for tips the lead to stopping corruption.</h3>
+              <div className="landing-header-1">Who are RugSeekers?</div>
+              <div>We are a professional, diligent, and experienced team committed to helping eliminate fraud and corruption from the crypto space. The RugSeeker team was born out of our own experience with loss and is dedicated to rid investors of that very thing.</div>
             </div>
-            <Social />
-            <div></div>
           </div>
-          <div id="grad1">
-              <img src={logo} height="200" width="200"></img>
-          </div>
-          <KeyPointsSlide />
-       
+          <Social />
+          <div></div>
+        </div>
+        <div id="grad1">
+          <img src={logo} height="200" width="200"></img>
+        </div>
+        <KeyPointsSlide />
+
         <div className="dark-gray-background card lane-padding">
           <div className="landingRow3">
             <div className="landing-header-1">RugSeekers has been featured in</div>
@@ -68,16 +68,15 @@ function Landing() {
         </div>
         <div className="dark-gray-background card lane-padding">
           <div className="landingRow4">
-          <div className="landing-header-1">Tokenomics</div>
-          <TokenomicsPanel />
-
+            <div className="landing-header-1">Tokenomics</div>
+            <TokenomicsPanel />
           </div>
         </div>
         <div className="card gray-background lane-padding">
           <div className="landing-header-1 ">Vetted Projects</div>
           <ProjectCards />
         </div>
-          <RoadmapCards />
+        <RoadmapCards />
         <div className="footer">
           <div className="quick-links">
             <a>Whitepaper</a>
