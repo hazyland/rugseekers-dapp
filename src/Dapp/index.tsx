@@ -18,7 +18,7 @@ function Title(props: { title: string; desc: string }) {
         <>
             <h6
                 style={{
-                    color: "yellow",
+                    color: "orange",
                     fontWeight: "bold",
                     textAlign: "left",
                     margin: "0",
@@ -124,7 +124,7 @@ export default function Dapp() {
     }, [w3State.currentWallet, w3State.currentContract]);
     console.log("w3State", w3State);
     return (
-        <div className="col-2 content-lane">
+        <div className="col-2 content-lane" >
             <div className="dapp">
                 <div className="top-banner">
                     <div className="image">

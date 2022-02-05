@@ -23,7 +23,7 @@
     box-sizing: content-box;
 }
 .token-stats > h6 {
-    color: yellow;
+    color: orange;
 }
 .token-stats > p {
     /* color: yellow; */
@@ -141,7 +141,7 @@ height: 1.7rem;
 }
 .claim-rewards {
     height: 40px;
-background: wheat;
+background:orange;
 width: 50%;
 height: 1.5rem;
 }
