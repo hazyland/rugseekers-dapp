@@ -140,7 +140,9 @@
 
 }
 
-
+.orange_text{
+  color: orange;
+}
 
 
 .landing-header-1{
@@ -323,13 +325,23 @@ padding: 10px;
 }
 
 .tokenomicsPanel{
-  width:75%;
-  height: 90%;
+  padding: 15px;
+  width:100%;
+  max-width: 500px;
+  height: auto;
   min-height: 300px;
   color: black;
   background-color: white;
   border-radius: 15px;
   justify-self: center;
+  align-items: center;
+  display:flex;
+  flex-direction: column;
+}
+
+.tokenomics-List{
+  text-align: left;
+  width:70%;
 }
 
 .tokenomicsPanelTabContent{
