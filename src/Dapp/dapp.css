@@ -13,6 +13,10 @@
     width: 100%;
 }
 
+.rewards-Headder{
+    color: rgb(39, 233, 0);
+}
+
 .token-stats {
     width: calc(99.6% - 4rem);
     height: auto;
