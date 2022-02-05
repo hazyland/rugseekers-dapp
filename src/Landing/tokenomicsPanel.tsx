@@ -13,18 +13,12 @@ export default function TokenomicsPanel() {
         <div>
           <ul className="nav-links">
             <li>
-              <Link to="/landing">Home</Link>
+              Token Supply
             </li>
-            <li>Whiteaper</li>
-            <li>Roadmap</li>
-            <li>Tokenomics</li>
-            <li>Reflection</li>
-            <li>VettedProjects</li>
-            <li>Online Store</li>
-            <li>How to Buy</li>
-            <Link to="/">Main Website</Link>
-            <Link to="/Dapp">Dapp</Link>
-            <ConnectWalletButton />
+            <li>Taxes</li>
+            <li>Reflections</li>
+            <li>Team Wallets</li>
+            <li>Lock Profile</li>
           </ul>
         </div>
       </div>

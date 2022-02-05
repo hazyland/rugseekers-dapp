@@ -305,8 +305,20 @@ padding: 10px;
   height: 400px;
   color: black;
   background-color: white;
+  border-radius: 15px;
 }
 
+
+.submitBtn{
+  color:white;
+  width: 100px;
+  border-radius: 10px;
+  height: 30px;
+  border: none;
+
+  background-color:orange;
+  align-self: center;
+}
 
 
 
