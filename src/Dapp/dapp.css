@@ -127,8 +127,9 @@ p {
 }
 .footer {
     margin-top: 2rem;
-    background-color: rgb(38, 38, 38);
+    background-color: rgb(55, 55, 55);
     width: 100%;
+    color: white;
 }
 
 .claimable-rewards {
@@ -138,10 +139,16 @@ p {
 height: 40px;
 background-color: honeydew;
 height: 1.7rem;
+border-radius: 10px;
+margin: 10px;
 }
 .claim-rewards {
     height: 40px;
 background:orange;
 width: 50%;
 height: 1.5rem;
+align-self: center;
+justify-self: center;
+border-radius: 10px;
+margin: 10px;
 }

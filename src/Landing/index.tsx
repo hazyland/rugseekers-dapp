@@ -20,7 +20,7 @@ function Landing() {
     const AppState = useAppProvider()
 
     return (
-      <div className="landing">
+      <div className="landing dark-gray-background">
         <div className={AppState.appDimensions.innerWidth <= 500 ? "landingRow-1-mobile dark-gray-background" : "landingRow-1 dark-gray-background"}>
           <div className={"who-is " + (AppState.appDimensions.innerWidth <= 500 ? "row-2" : "col-2")}>
             <div>
