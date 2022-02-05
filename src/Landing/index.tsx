@@ -62,17 +62,18 @@ function Landing() {
         </div>
         <div className="dark-gray-background">
           <div className="landingRow5">
-          <div className="landing-header-1">Tokenomics</div>
-          <TokenomicsPanel />
-
+            <div className="landing-header-1">Tokenomics</div>
+            <div className="tokenomicsPanelContainer">
+              <TokenomicsPanel />
+            </div>
           </div>
         </div>
-        <div className="dark-gray-background">
+        <div className="gray-background">
           <div className="landing-header-1">Vetted Projects</div>
           <ProjectCards />
         </div>
-        <div className="gray-background">
-          <div className="landing-header-1">Roadmap</div>
+        <div className="dark-gray-background">
+          {/* <div className="landing-header-1">Roadmap</div> */}
           <RoadmapCards />
         </div>
       </div>

@@ -52,12 +52,15 @@ nav{
 }
 
 .nav-links{
-  width: 70%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   list-style: none;
   flex-wrap: wrap;
+}
+
+ul{
+  padding: 10px;
 }
 
 .logo-container{
@@ -313,6 +316,11 @@ padding: 10px;
   align-items: center;
 }
 
+.tokenomicsPanelContainer{
+  display: flex;
+  justify-content: center;
+}
+
 .tokenomicsPanel{
   width:75%;
   height: 90%;
@@ -320,6 +328,11 @@ padding: 10px;
   color: black;
   background-color: white;
   border-radius: 15px;
+}
+
+.tokenomicsPanelTabContent{
+  height: 100%;
+  width: 100%;
 }
 
 

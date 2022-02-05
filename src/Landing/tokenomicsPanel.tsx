@@ -36,7 +36,6 @@ export default function TokenomicsPanel() {
 
   return (
     <div className="tokenomicsPanel">
-      <div>
         <div>
           <ul className="nav-links">
             <li onClick={()=> {setTabName("tokenSupply")}}>Token Supply</li>
@@ -50,9 +49,7 @@ export default function TokenomicsPanel() {
             <div>
                 {tab()}
             </div>
-
         </div>
-      </div>
     </div>
   );
 }
