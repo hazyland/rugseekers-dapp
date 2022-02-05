@@ -1,16 +1,17 @@
-import landing from './landing'
 import ContactPanel from './contactPanel';
 import ProjectCards from './projectCard';
 import RoadmapCards from './roadmapCard';
 import TokenomicsPanel from './tokenomicsPanel';
 import KeyPointsSlide from './keyPointsSlide';
 import Social from './social'
-
+import {ReactComponent as BloombergLogo} from "../assets/bloomberg-logo.svg"
+import msnIcon from "../assets/msn.png"
 import { useAppProvider } from '../contexts/App/AppProvider';
 
 
 
 import bountyIMG from '../assets/pirate.png'
+import { ResponsiveImage } from '../lib/UI';
 
 
 function Landing() {
@@ -18,7 +19,6 @@ function Landing() {
 
     return (
       <div className="landing">
-        <div className="dark-gray-background">
           <div className={AppState.appDimensions.innerWidth <= 500 ? "landingRow-1-mobile" : "landingRow-1"}>
             <div className={"who-is " + (AppState.appDimensions.innerWidth <= 500 ? "row-2" : "col-2")}>
               <div>
@@ -31,16 +31,17 @@ function Landing() {
             <div></div>
           </div>
           <KeyPointsSlide />
-        </div>
-        <div className="dark-gray-background">
+       
+        <div className="dark-gray-background card lane-padding">
           <div className="landingRow3">
             <div className="landing-header-1">RugSeekers has been featured in</div>
             <div className="featuredIcons">
               <div>
-                <img src={bountyIMG} height="100" width="100"></img>
+                <BloombergLogo />
+                {/* <img src={bountyIMG} height="100" width="100"></img> */}
               </div>
               <div>
-                <img src={bountyIMG} height="100" width="100"></img>
+                <ResponsiveImage src={msnIcon} />
               </div>
               <div>
                 <img src={bountyIMG} height="100" width="100"></img>
@@ -60,22 +61,19 @@ function Landing() {
             </div>
           </div>
         </div>
-        <div className="dark-gray-background">
-          <div className="landingRow5">
-            <div className="landing-header-1">Tokenomics</div>
-            <div className="tokenomicsPanelContainer">
-              <TokenomicsPanel />
-            </div>
+        <div className="dark-gray-background card lane-padding">
+          <div className="landingRow4">
+          <div className="landing-header-1">Tokenomics</div>
+          <TokenomicsPanel />
+
           </div>
         </div>
-        <div className="gray-background">
-          <div className="landing-header-1">Vetted Projects</div>
+        <div className="card gray-background lane-padding">
+          <div className="landing-header-1 ">Vetted Projects</div>
           <ProjectCards />
         </div>
-        <div className="dark-gray-background">
-          {/* <div className="landing-header-1">Roadmap</div> */}
           <RoadmapCards />
-        </div>
+      
       </div>
     );
 

@@ -11,7 +11,7 @@ let string3 = "RugSeekers is dedicated to crypto space security and creating a s
 
 export default function KeyPointsSlide() {
   return (
-    <div className="landingRow2">
+    <div className="landingRow2 lane-padding">
       <div className="keyPointSlide">
         <img src={astro}></img>
         <div className="landing-header-2">The Future of Crypto space Security</div>

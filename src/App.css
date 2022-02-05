@@ -120,6 +120,13 @@ ul{
   height: auto;
   position: relative;
   width: 100%;
+  height: min-content;
+  margin-top: 1rem;
+  position: relative;
+  /* display: grid; */
+  width: 100%;
+  /* gap: 1rem 5%; */
+  /* grid-template-rows: 20% 80%; */
   align-items: center;
   color: black;
   min-height: 350px;
@@ -311,8 +318,18 @@ padding: 10px;
   position: relative;
   display: grid;
   /* width: 100%; */
+  gap: 4%;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-auto-rows: minmax(1rem, auto);
+  grid-auto-rows: minmax(150px, auto);
+  align-items: center;
+}
+.featuredIcons > div {
+  height: 100%;
+  width: 100%;
+  min-height: 150px;
+  display: flex;
+  min-width: 200px;
+  justify-content: center;
   align-items: center;
 }
 

@@ -86,13 +86,16 @@ const phaseItems = [
         },
     ],
 ];
+
 function PhaseBox(props: { index: number; items: any[] }) {
     return (
         <div className="phase-box">
             <p style={{
                 color: "orange",
                 fontWeight: "bold"
-            }}>Phase {props.index + 1}</p>
+            }}>
+                Phase {props.index + 1}
+            </p>
             {props.items.map((item) => {
                 return (
                     <div className="phase-item">
