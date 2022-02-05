@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../assets/logo.png'
+import logo from '../assets/rug-logo-2.png'
 
 
 export default function ProjectCard() {
@@ -8,13 +8,12 @@ export default function ProjectCard() {
     <div className="landingRow5">
       <div className="projectCard">
         <div>
-          <img src={logo}> </img>
-          <img src={logo}> </img>
-          <img src={logo}> </img>
-          <img src={logo}> </img>
-          <img src={logo}> </img>
-          <img src={logo}> </img>
-          <img src={logo}> </img>
+          <img src={logo} height="100" width="100"></img>
+          <img src={logo} height="100" width="100"></img>
+          <img src={logo} height="100" width="100"></img>
+          <img src={logo} height="100" width="100"></img>
+          <img src={logo} height="100" width="100"></img>
+          <img src={logo} height="100" width="100"></img>
         </div>
       </div>
     </div>
