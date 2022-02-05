@@ -39,35 +39,6 @@
 }
 
 
-nav{ 
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 10vh;
-  min-height: 90px;
-  background-color: rgb(62, 62, 255) ;
-  color: white;
-  grid-column-start: 2;
-}
-
-.nav-links{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-  flex-wrap: wrap;
-}
-
-ul{
-  padding: 10px;
-}
-
-.logo-container{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 
 .textBlob{
   padding: 10px;
@@ -374,7 +345,8 @@ padding: 10px;
   justify-content: center;
   flex-direction: column;
   padding:5px;
-  margin:10px
+  margin:10px;
+  justify-self: center;
 
 }
 
