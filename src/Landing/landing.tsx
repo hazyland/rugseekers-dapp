@@ -40,8 +40,11 @@ function Landing() {
         </div>
       </div>
       <div className="landing-row">
+          <div className="landingRow4">
         Tokenomics
         <TokenomicsPanel />
+
+          </div>
       </div>
       <div className="landing-row">
         Vetted Projects

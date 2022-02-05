@@ -35,31 +35,37 @@ function Landing() {
         <div className="dark-gray-background">
           <div className="landingRow3">
             <div className="landing-header-1">RugSeekers has been featured in</div>
-            <div className='featuredIcons'>
-
-            <img src={bountyIMG} height="100" width="100"></img>
-            <img src={bountyIMG} height="100" width="100"></img>
-            <img src={bountyIMG} height="100" width="100"></img>
+            <div className="featuredIcons">
+              <div>
+                <img src={bountyIMG} height="100" width="100"></img>
+              </div>
+              <div>
+                <img src={bountyIMG} height="100" width="100"></img>
+              </div>
+              <div>
+                <img src={bountyIMG} height="100" width="100"></img>
+              </div>
             </div>
           </div>
         </div>
         <div className="dark-gray-background">
           <div className="landingRow4">
-              <div>
-            <img src={bountyIMG} height="100" width="100"></img>
-            <div className="landing-header-1">Yar Bounty Program</div>
-            <div className='textBlob'>Please list the contract address and name of the project below that you would like Rugsekers to investigate.Your personla information is kept completely and 100% secured with in our system. You can also use the form below to submit feedback or suggestions on how we can improve the project. Thank you. Fight the good fight and lets #stopinsanity</div>
-
-              </div>
-              <div className='contactPanelContainer'>
-                    <ContactPanel />
-
-              </div>
+            <div>
+              <img src={bountyIMG} height="100" width="100"></img>
+              <div className="landing-header-1">Yar Bounty Program</div>
+              <div className="textBlob">Please list the contract address and name of the project below that you would like Rugsekers to investigate.Your personla information is kept completely and 100% secured with in our system. You can also use the form below to submit feedback or suggestions on how we can improve the project. Thank you. Fight the good fight and lets #stopinsanity</div>
+            </div>
+            <div className="contactPanelContainer">
+              <ContactPanel />
+            </div>
           </div>
         </div>
         <div className="gray-background">
+          <div className="landingRow4">
           <div className="landing-header-1">Tokenomics</div>
           <TokenomicsPanel />
+
+          </div>
         </div>
         <div className="dark-gray-background">
           <div className="landing-header-1">Vetted Projects</div>
