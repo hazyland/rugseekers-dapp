@@ -48,6 +48,7 @@ display: block;
   display: flex;
   flex-direction: column;
   font-size: 1.2rem;
+  color:white
 }
 .sliding-panel .nav-links a {
   margin-top: 1rem;
@@ -58,8 +59,8 @@ display: block;
     height: 100vh;
     top: 0;
     left: 0;
-    width: 70vw;
-    background-color: aqua;
+    width: 60vw;
+    background-color: rgb(13,84,190);
     z-index: 1000000;
     transition: transform 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06);
 }
