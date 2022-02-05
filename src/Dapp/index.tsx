@@ -107,7 +107,6 @@ export default function Dapp() {
         if (w3State.currentContract && w3State.currentWallet) {
             const balance = await w3State.currentContract.balanceOf(w3State.currentWallet);
             const rewards = await w3State.currentContract.rewardsOf(w3State.currentWallet);
-            const nextSell = await w3State.currentContract.nextSellOf(w3State.currentWallet);
 
             web3Dispatch({ type: "UPDATE_USER_TOKEN_BALANCE", payload: balance });
             web3Dispatch({ type: "UPDATE_USER_TOTAL_REWARDS", payload: rewards });
@@ -160,13 +159,13 @@ export default function Dapp() {
                                 value={w3State.totalSupply.toString()}
                             />
                         </div>
-                        <div className="burned-tokens">
+                        {/* <div className="burned-tokens">
                             <Section
                                 icon={fireIcon}
                                 title="burned tokens"
                                 value={w3State.tokensBurned.toString()}
                             />
-                        </div>
+                        </div> */}
                         <div className="tokens-in-burn-vault">
                             <Section
                                 icon={burnFolderIcon}
@@ -258,7 +257,30 @@ export default function Dapp() {
                         >
                             Claim Rewards As
                         </div>
-                        <div className="claim-rewards">Claim Rewards</div>
+                        <div
+                            className="claim-rewards"
+                            onClick={async () => {
+                                try {
+                                    if (w3State.currentWallet) {
+                                        const p = new ethers.providers.Web3Provider(
+                                            w3State.walletProvider
+                                        );
+                                        const signer = p.getSigner();
+                                        console.log(signer);
+                                        const contractSigner =
+                                            await w3State.currentContract.connect(signer);
+                                        console.log(contractSigner);
+                                        const res = await contractSigner.claimBNB();
+                                        console.log(res);
+                                        getUserData();
+                                    }
+                                } catch (e) {
+                                    console.log(e);
+                                }
+                            }}
+                        >
+                            Claim Rewards
+                        </div>
                     </div>
                     <div className="promotional-token">
                         <Title

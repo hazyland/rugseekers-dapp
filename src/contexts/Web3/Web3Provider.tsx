@@ -10,7 +10,7 @@ import RUGSEEKER_ABI from '../../assets/EagleEyeABI.json'
 import { ethers, utils } from "ethers";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import Web3Modal from "web3modal";
-export const RUGSEEKER_ADDRESS = '0x4e6a510659d3d0F6897bbab3Db67DA0B3d001fB7';
+export const RUGSEEKER_ADDRESS = '0xDe7C802759f9E9544133c1340263C8C2B8A21929';
 export const NODE_URL = "https://bsc-dataseed.binance.org/";
 interface Web3State {
   currentWallet: string | "";
@@ -145,7 +145,7 @@ async function initWeb3(web3Dispatch: any) {
     RUGSEEKER_ABI,
     provider
   );
-  const [totalRewards, totalSupply, tokensBurned, tokensToBurn, timeLeft] = await Promise.all([EagleEyeContract.totalRewardBNBPaid(),EagleEyeContract.totalSupply(), EagleEyeContract.totalTokensBurned(), EagleEyeContract.tokensToBurn(), EagleEyeContract.liquidityUnlockTimeLeft()])
+  const [totalRewards, totalSupply, tokensBurned, timeLeft] = await Promise.all([EagleEyeContract.totalRewardBNBPaid(),EagleEyeContract.totalSupply(), EagleEyeContract.totalTokensBurned(), EagleEyeContract.liquidityUnlockTimeLeft()])
   web3Dispatch({ type: "UPDATE_WEB3_PROVIDER", payload: provider });
   web3Dispatch({ type: "UPDATE_CURRENT_CONTRACT", payload: EagleEyeContract });
   // const totalRewards = await EagleEyeContract.totalRewardBNBPaid();
@@ -156,7 +156,7 @@ async function initWeb3(web3Dispatch: any) {
   // const tokensBurned = await EagleEyeContract.totalTokensBurned();
   web3Dispatch({ type: "UPDATE_TOTAL_BURNED", payload: tokensBurned });
   // const tokensToBurn = await EagleEyeContract.tokensToBurn();
-  web3Dispatch({ type: "UPDATE_TOKENS_TO_BURN", payload: tokensToBurn });
+  // web3Dispatch({ type: "UPDATE_TOKENS_TO_BURN", payload: tokensToBurn });
   // const timeLeft = await EagleEyeContract.liquidityUnlockTimeLeft();
   web3Dispatch({ type: "UPDATE_TIME", payload: timeLeft.toString() });
 }

@@ -7,7 +7,6 @@ import Social from './social'
 import {ReactComponent as BloombergLogo} from "../assets/bloomberg-logo.svg"
 import msnIcon from "../assets/msn.png"
 import logo from '../assets/rug-logo 2.png'
-
 import { useAppProvider } from '../contexts/App/AppProvider';
 
 
