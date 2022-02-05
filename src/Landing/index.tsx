@@ -54,10 +54,8 @@ function Landing() {
           <div className="landing-header-1">Vetted Projects</div>
           <ProjectCard />
         </div>
-        <div className="gray-background">
-          <div className="landing-header-1">Raodmap</div>
           <RoadmapCard />
-        </div>
+       
       </div>
     );
 
