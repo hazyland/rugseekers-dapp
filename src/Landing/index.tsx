@@ -48,7 +48,7 @@ function Landing() {
             </div>
           </div>
         </div>
-        <div className="dark-gray-background">
+        <div className="gray-background">
           <div className="landingRow4">
             <div>
               <img src={bountyIMG} height="100" width="100"></img>
@@ -60,8 +60,8 @@ function Landing() {
             </div>
           </div>
         </div>
-        <div className="gray-background">
-          <div className="landingRow4">
+        <div className="dark-gray-background">
+          <div className="landingRow5">
           <div className="landing-header-1">Tokenomics</div>
           <TokenomicsPanel />
 

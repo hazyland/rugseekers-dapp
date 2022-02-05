@@ -7,7 +7,6 @@
 
 .app-mobile {
   text-align: center;
-  display: grid;
   grid-template-columns: 0vw 100vw 0vw;
   background-color: black;
   width: 100%;
@@ -75,21 +74,12 @@ nav{
 
 
 .landing{
-  /* height: 90%; */
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
 
-
-/* .landing-row{
-  height: 250px;
-  width: 100%;
-  color: white;
-  min-height: 600px
-  
-} */
 
 .landingRow-1{
   display: grid;
@@ -107,14 +97,6 @@ nav{
 
 
 .landingRow2{
-  /* background-color: white;
-  display: grid;
-  grid-template-columns: 33.33% 33.33% 33.33%;
-  align-items: center;
-  color: black;
-  height:auto */
-
-  margin-top: 1rem;
   position: relative;
   display: grid;
   width: 100%;
@@ -131,17 +113,11 @@ nav{
 }
 
 .landingRow3{
+    margin-top: 1rem;
   height: auto;
-  margin-top: 1rem;
   position: relative;
-  display: grid;
   width: 100%;
-  /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-auto-rows: minmax(1rem, auto); */
-  /* gap: 1rem 5%; */
-    grid-template-rows: 20% 80%;
   align-items: center;
-  /* background-color: white; */
   color: black;
   min-height: 350px;
 
@@ -149,18 +125,29 @@ nav{
 
 
 .landingRow4{
-  height:auto;
-  min-height: 300px;
-  width:100%;
   margin-top: 1rem;
   position: relative;
   display: grid;
   width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-auto-rows: minmax(1rem, auto);
-  /* gap: 1rem 5%; */
   align-items: center;
+  min-height: 350px;
 }
+
+.landingRow5{
+  height: auto;
+  margin-top: 1rem;
+  position: relative;
+  display: grid;
+  width: 100%;
+  align-items: center;
+  color: black;
+  min-height: 350px;
+
+}
+
+
 
 
 .landing-header-1{
@@ -256,7 +243,7 @@ padding: 10px;
 .contactPanelContainer{
   width: 100%;
   display: flex;
-  justify-content: center;  /* flex-direction: row-reverse; */
+  justify-content: center; 
   padding: 10px;
 }
 
@@ -264,30 +251,25 @@ padding: 10px;
   min-height:250px;
   height: auto;
   width: 90%;
-  /* min-width: 500px; */
   max-height: 300px;
   max-width: 400px;
-
   display: flex;
   flex-direction: column;
   border-radius: 15px;
   background-color: lightslategray;
   align-self: center;
-  /* justify-content: space-around; */
 }
 
 .contactPanelName{
   margin: 10px;
   height: 25px;
-    border-radius: 15px;
-    /* background-color: linen; */
-
+  border-radius: 15px;
 }
 .contactPanelEmail{
   margin: 10px;
   border-radius: 15px;
     height: 25px;
-      /* background-color: linen; */
+
 }
 
 .contactPanelMessage{
@@ -333,7 +315,8 @@ padding: 10px;
 
 .tokenomicsPanel{
   width:75%;
-  height: 400px;
+  height: 90%;
+  min-height: 300px;
   color: black;
   background-color: white;
   border-radius: 15px;
