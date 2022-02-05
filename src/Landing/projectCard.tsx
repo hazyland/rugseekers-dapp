@@ -4,19 +4,20 @@ import project from "../assets/project.png"
 
 
 export default function ProjectCard() {
+  let projectIMG = project
 
   const vettedProjects = [{projectName:"Project Name Here", rating:93.5},{projectName:"Project Name Here", rating:93.5},{projectName:"Project Name Here", rating:93.5},{projectName:"Project Name Here", rating:93.5},{projectName:"Project Name Here", rating:93.5},{projectName:"Project Name Here", rating:93.5},{projectName:"Project Name Here", rating:93.5}]
   
 
-  function vettedProjectsMap() {
+  function vettedProjectsMap(project : any) {
 
     return (
       <div className="projectCard">
         <div>
-          <img src={project} height="80" width="80"></img>
+          <img src={projectIMG} height="80" width="80"></img>
         </div>
-        <div>Project Name Goes Here</div>
-        <div className="score">93.5</div>
+        <div>{project.projectName}</div>
+        <div className="score">{project.rating}</div>
       </div>
     );
   }

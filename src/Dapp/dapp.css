@@ -1,6 +1,7 @@
 .dapp {
     color: black;
     margin-top: 70px;
+    background-color: white;
 }
 .top-banner {
     display: grid;
@@ -12,17 +13,21 @@
     width: 100%;
 }
 
+.rewards-Headder{
+    color: rgb(39, 233, 0);
+}
+
 .token-stats {
     width: calc(99.6% - 4rem);
     height: auto;
     margin: auto;
-    background-color: rgb(55, 55, 61);
+    background-color: rgb(38, 38, 38);
     border-radius: 6px;
     padding: 0.5rem 1.7rem;
     box-sizing: content-box;
 }
 .token-stats > h6 {
-    color: yellow;
+    color: orange;
 }
 .token-stats > p {
     /* color: yellow; */
@@ -78,7 +83,7 @@
     width: 100%;
     margin: auto;
     padding: 1rem;
-    background-color: grey;
+    background-color: rgb(38, 38, 38);
     padding: 0.5rem 1.7rem;
     width: 99%
 }
@@ -111,7 +116,7 @@ p {
     align-self: flex-start;
     margin-right: 0%;
     border-radius: 6px;
-    background-color: grey;
+    background-color: rgb(38, 38, 38);
     padding: 0.5rem 1.7rem;
     height: min-content;
     width: 99%
@@ -126,8 +131,10 @@ p {
 }
 .footer {
     margin-top: 2rem;
-    background-color: grey;
+    background-color: rgb(55, 55, 55);
     width: 100%;
+    color: white;
+    border-radius:10px;
 }
 
 .claimable-rewards {
@@ -137,10 +144,16 @@ p {
 height: 40px;
 background-color: honeydew;
 height: 1.7rem;
+border-radius: 10px;
+margin: 10px;
 }
 .claim-rewards {
     height: 40px;
-background: wheat;
+background:orange;
 width: 50%;
 height: 1.5rem;
+align-self: center;
+justify-self: center;
+border-radius: 10px;
+margin: 10px;
 }

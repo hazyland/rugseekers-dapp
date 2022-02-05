@@ -18,7 +18,7 @@ function Title(props: { title: string; desc: string }) {
         <>
             <h6
                 style={{
-                    color: "yellow",
+                    color: "orange",
                     fontWeight: "bold",
                     textAlign: "left",
                     margin: "0",
@@ -123,196 +123,158 @@ export default function Dapp() {
     }, [w3State.currentWallet, w3State.currentContract]);
     console.log("w3State", w3State);
     return (
-        <div className="col-2 content-lane">
-            <div className="dapp">
-                <div className="top-banner">
-                    <div className="image">
-                        <ResponsiveImage src={rugseekersLogo} />
-                    </div>
-                    <div>
-                        <h2>Rugseekers Rewards Dapp</h2>
-                        <p>We are a professional, diligent, and experienced </p>
-                    </div>
-                </div>
-                <div className="token-stats">
-                    <Title title="Rugseeker Token Stats" desc=" See how's our project doing." />
-                    <Divider />
-                    <div className="icons-container">
-                        <div className="total-rewards-distributed">
-                            <Section
-                                icon={giftIcon}
-                                title={"total rewards distributed"}
-                                value={`${w3State.totalRewards} BNB`}
-                            />
-                        </div>
-                        <div className="liquidity-unlock-timer">
-                            <Section
-                                title="liquidity unlock timer"
-                                value={`${w3State.timeLeftHours}D ${w3State.timeLeftHours}HR ${w3State.timeLeftSeconds}M`}
-                                icon={timerIcon}
-                            />
-                        </div>
-                        <div className="circulating-supply">
-                            <Section
-                                icon={coinbagIcon}
-                                title="circulating supply"
-                                value={w3State.totalSupply.toString()}
-                            />
-                        </div>
-                        {/* <div className="burned-tokens">
-                            <Section
-                                icon={fireIcon}
-                                title="burned tokens"
-                                value={w3State.tokensBurned.toString()}
-                            />
-                        </div> */}
-                        <div className="tokens-in-burn-vault">
-                            <Section
-                                icon={burnFolderIcon}
-                                title="tokens in burn vault"
-                                value={w3State.tokensToBurn.toString()}
-                            />
-                        </div>
-                        <div className="holders">
-                            <Section icon={membersIcon} title="holders" value="443" />
-                        </div>
-                    </div>
-                </div>
-                <div className="section-3">
-                    <div className="token-rewards">
-                        <Title
-                            title="Claim Token Rewards"
-                            desc=" get your tokens rewards as BNB. $Seek or any BEP20 token."
-                        />
-                        <Divider />
-                        <div className="balance-container">
-                            <div className="seek-balance">
-                                <Section
-                                    icon={rugseekersLogo}
-                                    title="$Seek Balance"
-                                    value={w3State.userTokenBalance.toString()}
-                                />
-                            </div>
-                            <div className="claimable-rewards">
-                                <Section
-                                    icon={coinIcon}
-                                    title="Claimable Rewards"
-                                    value={w3State.userTotalRewards.toString()}
-                                />
-                            </div>
-                        </div>
-                        <Divider />
+      <div className="col-2 content-lane">
+        <div className="dapp">
+          <div className="top-banner">
+            <div className="image">
+              <ResponsiveImage src={rugseekersLogo} />
+            </div>
+            <div>
+                <div className="rewards-Headder">
+                     <h1 >Rugseekers Rewards Dapp</h1>
 
-                        <div
-                            className="claimable-rewards-2"
-                            style={{
-                                height: "80px",
-                            }}
-                        >
-                            <Section
-                                icon={questionIcon}
-                                title="Select one option below in which form would you like to receive your
+                </div>
+              <p>We are a professional, diligent, and experienced team committed to helping eliminate fraud and corruption from the crypto space. The RugSeeker team was born out of our own experience with loss and is dedicated to rid investors of that very thing.</p>
+            </div>
+          </div>
+          <div className="token-stats">
+            <Title title="Rugseeker Token Stats" desc=" See how's our project doing." />
+            <Divider />
+            <div className="icons-container">
+              <div className="total-rewards-distributed">
+                <Section icon={giftIcon} title={"total rewards distributed"} value={`${w3State.totalRewards} BNB`} />
+              </div>
+              <div className="liquidity-unlock-timer">
+                <Section title="liquidity unlock timer" value={`${w3State.timeLeftHours}D ${w3State.timeLeftHours}HR ${w3State.timeLeftSeconds}M`} icon={timerIcon} />
+              </div>
+              <div className="circulating-supply">
+                <Section icon={coinbagIcon} title="circulating supply" value={w3State.totalSupply.toString()} />
+              </div>
+              <div className="burned-tokens">
+                <Section icon={fireIcon} title="burned tokens" value={w3State.tokensBurned.toString()} />
+              </div>
+              <div className="tokens-in-burn-vault">
+                <Section icon={burnFolderIcon} title="tokens in burn vault" value={w3State.tokensToBurn.toString()} />
+              </div>
+              <div className="holders">
+                <Section icon={membersIcon} title="holders" value="443" />
+              </div>
+            </div>
+          </div>
+          <div className="section-3">
+            <div className="token-rewards">
+              <Title title="Claim Token Rewards" desc=" get your tokens rewards as BNB. $Seek or any BEP20 token." />
+              <Divider />
+              <div className="balance-container">
+                <div className="seek-balance">
+                  <Section icon={rugseekersLogo} title="$Seek Balance" value={w3State.userTokenBalance.toString()} />
+                </div>
+                <div className="claimable-rewards">
+                  <Section icon={coinIcon} title="Claimable Rewards" value={w3State.userTotalRewards.toString()} />
+                </div>
+              </div>
+              <Divider />
+
+              <div
+                className="claimable-rewards-2"
+                style={{
+                  height: "80px",
+                }}
+              >
+                <Section
+                  icon={questionIcon}
+                  title="Select one option below in which form would you like to receive your
                         rewards. Click the (?) for more detailed info"
-                                value=""
-                            />
-                        </div>
-                        <div
-                            className="claim-rewards-as"
-                            onClick={async () => {
-                                const { value: token } = await Swal.fire({
-                                    title: "Input token address",
-                                    input: "text",
-                                    inputLabel: "Address needs to be a valid BEP-20 token.",
-                                    inputPlaceholder: "Enter token address",
-                                    showCancelButton: true,
-                                    inputValidator: (val) => {
-                                        const rex = new RegExp(/^0x[a-fA-F0-9]{40}$/);
-                                        if (!rex.test(val)) {
-                                            return "Not A BSC Address";
-                                        }
-                                        return null;
-                                    },
-                                });
-                                console.log(token);
-                                if (token) {
-                                    try {
-                                        if (w3State.currentWallet) {
-                                            const p = new ethers.providers.Web3Provider(
-                                                w3State.walletProvider
-                                            );
-                                            const signer = p.getSigner();
-                                            console.log(signer);
-                                            const contractSigner =
-                                                await w3State.currentContract.connect(signer);
-                                            console.log(contractSigner);
-                                            const res = await contractSigner.claimAnyToken(token);
-                                            console.log(res);
-                                            getUserData();
-                                        }
-                                    } catch (e) {
-                                        console.log(e);
-                                    }
-                                }
-                            }}
-                        >
-                            Claim Rewards As
-                        </div>
-                        <div
-                            className="claim-rewards"
+                  value=""
+                />
+              </div>
+              <div
+                className="claim-rewards-as"
+                onClick={async () => {
+                  const { value: token } = await Swal.fire({
+                    title: "Input token address",
+                    input: "text",
+                    inputLabel: "Address needs to be a valid BEP-20 token.",
+                    inputPlaceholder: "Enter token address",
+                    showCancelButton: true,
+                    inputValidator: (val) => {
+                      const rex = new RegExp(/^0x[a-fA-F0-9]{40}$/);
+                      if (!rex.test(val)) {
+                        return "Not A BSC Address";
+                      }
+                      return null;
+                    },
+                  });
+                  console.log(token);
+                  if (token) {
+                    try {
+                      if (w3State.currentWallet) {
+                        const p = new ethers.providers.Web3Provider(w3State.walletProvider);
+                        const signer = p.getSigner();
+                        console.log(signer);
+                        const contractSigner = await w3State.currentContract.connect(signer);
+                        console.log(contractSigner);
+                        const res = await contractSigner.claimAnyToken(token);
+                        console.log(res);
+                        getUserData();
+                      }
+                    } catch (e) {
+                      console.log(e);
+                    }
+                  }
+                }}
+              >
+                Claim Rewards As
+              </div>
+              <div className="claim-rewards" 
                             onClick={async () => {
                                 try {
-                                    if (w3State.currentWallet) {
-                                        const p = new ethers.providers.Web3Provider(
-                                            w3State.walletProvider
-                                        );
-                                        const signer = p.getSigner();
-                                        console.log(signer);
-                                        const contractSigner =
-                                            await w3State.currentContract.connect(signer);
-                                        console.log(contractSigner);
-                                        const res = await contractSigner.claimBNB();
-                                        console.log(res);
-                                        getUserData();
-                                    }
+                                  if (w3State.currentWallet) {
+                                    const p = new ethers.providers.Web3Provider(
+                                      w3State.walletProvider
+                                    );
+                                    const signer = p.getSigner();
+                                    console.log(signer);
+                                    const contractSigner =
+                                      await w3State.currentContract.connect(signer);
+                                    console.log(contractSigner);
+                                    const res = await contractSigner.claimBNB();
+                                    console.log(res);
+                                    getUserData()
+                                  }
                                 } catch (e) {
-                                    console.log(e);
-                                }
-                            }}
-                        >
-                            Claim Rewards
-                        </div>
-                    </div>
-                    <div className="promotional-token">
-                        <Title
-                            title="Promotional Token"
-                            desc="Check out our latest promo token. "
-                        />
-
-                        <Divider />
-                        <div className="promo-token-1">
-                            <Section icon={rugseekersLogo} title={"Eagle Eye Token"} />
-                        </div>
-                    </div>
-                </div>
-                <div className="footer">
-                    <div className="quick-links">
-                        <a>Whitepaper</a>
-                        <a>Roadmap</a>
-                        <a>Tokenomics</a>
-                        <a>Reflection</a>
-                        <a>Vetted Projects</a>
-                        <a>Online Store</a>
-                        <a>How to Buy</a>
-                        <a>Buy Crypto</a>
-                    </div>
-
-                    <div>
-                        <h4>Contact Us</h4>
-                        <a>RugSeekers@gmail.com</a>
-                        <p>Copyright Rugseekers 2022 - All Rights Reserved</p>
-                    </div>
-                </div>
+                                  console.log(e);
+                                }}}
+              >Claim Rewards</div>
             </div>
+            <div className="promotional-token">
+              <Title title="Promotional Token" desc="Check out our latest promo token. " />
+
+              <Divider />
+              <div className="promo-token-1">
+                <Section icon={rugseekersLogo} title={"Eagle Eye Token"} />
+              </div>
+            </div>
+          </div>
+          <div className="footer">
+            <div className="quick-links">
+              <a>Whitepaper</a>
+              <a>Roadmap</a>
+              <a>Tokenomics</a>
+              <a>Reflection</a>
+              <a>Vetted Projects</a>
+              <a>Online Store</a>
+              <a>How to Buy</a>
+              <a>Buy Crypto</a>
+            </div>
+
+            <div>
+              <h4>Contact Us</h4>
+              <a>RugSeekers@gmail.com</a>
+              <p>Copyright Rugseekers 2022 - All Rights Reserved</p>
+            </div>
+          </div>
         </div>
+      </div>
     );
 }
