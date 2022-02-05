@@ -22,7 +22,7 @@
 
 
 import landing from "./landing";
-import LoginPanel from "./loginPanel";
+import LoginPanel from "./contactPanel";
 import ProjectCard from "./projectCard";
 import RoadmapCard from "./roadmapCard";
 import TokenomicsPanel from "./tokenomicsPanel";
