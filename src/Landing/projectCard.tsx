@@ -7,14 +7,15 @@ export default function ProjectCard() {
   return (
     <div className="landingRow5">
       <div className="projectCard">
-        <div>
+
+
           <img src={logo} height="100" width="100"></img>
           <img src={logo} height="100" width="100"></img>
           <img src={logo} height="100" width="100"></img>
           <img src={logo} height="100" width="100"></img>
           <img src={logo} height="100" width="100"></img>
           <img src={logo} height="100" width="100"></img>
-        </div>
+
       </div>
     </div>
   );
