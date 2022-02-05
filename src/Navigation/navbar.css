@@ -14,11 +14,14 @@ nav{
     color: black;
   }
   
+
+
   .nav-links{
     display: flex;
     font-size: 0.7rem;
   }
   
+
   
   
   .logo-container{
@@ -41,6 +44,15 @@ justify-content: space-evenly;
 .nav-links.slide {
 display: block;
 }
+.sliding-panel .nav-links{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+}
+.sliding-panel .nav-links a {
+  margin-top: 1rem;
+}
+
 .sliding-panel {
     position: fixed;
     height: 100vh;
