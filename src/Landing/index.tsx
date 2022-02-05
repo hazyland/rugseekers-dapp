@@ -1,7 +1,7 @@
 import landing from './landing'
 import ContactPanel from './contactPanel';
-import ProjectCard from './projectCard';
-import RoadmapCard from './roadmapCard';
+import ProjectCards from './projectCard';
+import RoadmapCards from './roadmapCard';
 import TokenomicsPanel from './tokenomicsPanel';
 import KeyPointsSlide from './keyPointsSlide';
 import Social from './social'
@@ -69,11 +69,11 @@ function Landing() {
         </div>
         <div className="dark-gray-background">
           <div className="landing-header-1">Vetted Projects</div>
-          <ProjectCard />
+          <ProjectCards />
         </div>
         <div className="gray-background">
-          <div className="landing-header-1">Raodmap</div>
-          <RoadmapCard />
+          <div className="landing-header-1">Roadmap</div>
+          <RoadmapCards />
         </div>
       </div>
     );
