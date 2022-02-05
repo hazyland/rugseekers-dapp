@@ -64,4 +64,7 @@ display: block;
     .nav-links {
         display: block;
     }
+    .sliding-panel {
+      display: none;
+    }
 }
