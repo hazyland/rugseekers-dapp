@@ -51,7 +51,7 @@ export default function TokenomicsPanel() {
   return (
     <div className="tokenomicsPanel">
     {/* <div className="phase-box"> */}
-        <h3>High Level Tokenomics</h3>
+        {/* <h3>High Level Tokenomics</h3> */}
         <div className="tokenomics-List">
           <div>
             <h4>Primary</h4>

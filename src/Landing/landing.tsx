@@ -35,16 +35,14 @@ function Landing() {
       <div className="landing-row">
         Yar Bounty Program
         <div className="contactPanelContainer">
-        <ContactPanel />
-
+          <ContactPanel />
         </div>
       </div>
       <div className="landing-row">
-          <div className="landingRow4">
-        Tokenomics
-        <TokenomicsPanel />
-
-          </div>
+        <div className="landingRow4">
+          High Level Tokenomics
+          <TokenomicsPanel />
+        </div>
       </div>
       <div className="landing-row">
         Vetted Projects

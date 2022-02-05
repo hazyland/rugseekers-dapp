@@ -66,7 +66,7 @@ function Landing() {
           </div>
         </div>
         <div className="dark-gray-background card lane-padding">
-            <div className="landing-header-1">Tokenomics</div>
+          <div className="landing-header-1">High Level Tokenomics</div>
           <div className="landingRow4">
             <TokenomicsPanel />
           </div>
