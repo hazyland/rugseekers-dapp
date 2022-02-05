@@ -39,6 +39,36 @@
 }
 
 
+nav{ 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  min-height: 90px;
+  background-color: rgb(62, 62, 255) ;
+  color: white;
+  grid-column-start: 2;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+ul{
+  padding: 10px;
+}
+
+.logo-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 
 .textBlob{
   padding: 10px;
@@ -57,7 +87,8 @@
 .landingRow-1{
   display: grid;
   grid-template-columns: 15% 70% 15%;
-  height:auto
+  height:auto;
+  min-height: 250px
 }
 
 .landingRow-1-mobile{
@@ -124,6 +155,16 @@
   align-items: center;
   color: black;
   min-height: 350px;
+
+}
+
+.landingRow6{
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  row-gap: 2rem;
+  margin-left: 10%;
+  margin-right: 10%;
 
 }
 
@@ -337,7 +378,7 @@ padding: 10px;
 
 
 .projectCard{
-  background-color: white;
+  /* background-color: white;
   width: 150px;
   height: 150px;
   border-radius: 15px;
@@ -347,20 +388,40 @@ padding: 10px;
   padding:5px;
   margin:10px;
   justify-self: center;
+  color:black;
+  margin:10px;
+  justify-self: center; */
+
+    background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 1rem 1rem;
+  align-items: center;
+  height: 100%;
+  align-self: center;
+  padding: 1rem;
+  /* margin: 1rem; */
+  height: min-content;
+  border-radius: 6px;
+  justify-self: center;
+  align-self: flex-start;
 
 }
 
 .projectCards{
-
-    margin-top: 1rem;
-  position: relative;
   display: grid;
-  width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-auto-rows: minmax(1rem, auto);
-  align-items: center;
-  min-height: 350px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
   
+}
+
+.score{
+  background-color: rgb(255, 54, 54);
+  color:white;
+  border-radius: 5px;
+  width:50%;
 }
 
 
@@ -426,4 +487,10 @@ display: flex;
   .lane-padding {
     padding: 1rem 1rem;
   }
+}
+
+#grad1 {
+  height: 200px;
+  background-color: black; /* For browsers that do not support gradients */
+  background-image: linear-gradient(rgb(51, 51, 51) 51%, white 49%);
 }

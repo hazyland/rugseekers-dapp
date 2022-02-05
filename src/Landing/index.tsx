@@ -6,6 +6,8 @@ import KeyPointsSlide from './keyPointsSlide';
 import Social from './social'
 import {ReactComponent as BloombergLogo} from "../assets/bloomberg-logo.svg"
 import msnIcon from "../assets/msn.png"
+import logo from '../assets/rug-logo 2.png'
+
 import { useAppProvider } from '../contexts/App/AppProvider';
 
 
@@ -29,6 +31,9 @@ function Landing() {
             </div>
             <Social />
             <div></div>
+          </div>
+          <div id="grad1">
+              <img src={logo} height="200" width="200"></img>
           </div>
           <KeyPointsSlide />
        
