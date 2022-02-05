@@ -112,7 +112,7 @@ function PhaseBox(props: { index: number; items: any[] }) {
 
 export default function RoadmapCard() {
     return (
-        <div className="roadmapCard card dark-gray-background lane-padding">
+        <div className="roadmapCard card dark-gray-background lane-padding" id="roadmap">
             <h1>Roadmap</h1>
             <div className="phases">
                 {phaseItems.map((phase, index) => {

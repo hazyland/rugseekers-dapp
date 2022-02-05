@@ -39,35 +39,7 @@
 }
 
 
-nav{ 
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 10vh;
-  min-height: 90px;
-  background-color: rgb(62, 62, 255) ;
-  color: white;
-  grid-column-start: 2;
-}
 
-.nav-links{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-ul{
-  padding: 10px;
-}
-
-.logo-container{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
 
 
 .textBlob{
@@ -77,10 +49,7 @@ ul{
 
 
 .landing{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
+  margin-top: 70px;
 }
 
 

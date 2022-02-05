@@ -1,31 +1,28 @@
 import React, { useState } from "react";
 import "./navbar.css";
-import { BrowserRouter as BrowserRouterProvider, Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logo from "../assets/rug-logo 2.png";
 import { ConnectWalletButton } from "../components/ConnectWalletButton";
 import { useWeb3ProviderState } from "../contexts/Web3/Web3Provider";
 import hamburger from "../assets/hamburger.png";
 import { useAppProvider } from "../contexts/App/AppProvider";
+import { ResponsiveImage } from "../lib/UI";
 
 function Links(props: { slide: boolean }) {
     const className = props.slide ? " slide" : "";
     return (
-        <ul className={"nav-links" + className}>
-            <li>
-                <Link to="/landing">Home</Link>
-            </li>
-            <li>Whiteaper</li>
-            <li>Roadmap</li>
-            <li>Tokenomics</li>
-            <li>Reflection</li>
-            <li>VettedProjects</li>
-            <li>Online Store</li>
-            <li>How to Buy</li>
-            <Link to="/">Main Website</Link>
+        <div className={"nav-links" + className}>
+            <a>Whiteaper</a>
+            <a href="#roadmap">Roadmap</a>
+            <a>Tokenomics</a>
+            <a>Reflection</a>
+            <a>VettedProjects</a>
+            <a>Online Store</a>
+            <a>How to Buy</a>
+            <Link to="/landing">Main Website</Link>
             <Link to="/Dapp">Dapp</Link>
             <ConnectWalletButton />
-        </ul>
+        </div>
     );
 }
 
@@ -43,12 +40,19 @@ function Navigation() {
     return (
         <nav>
             <div className="logo-container">
-                <img src={logo} height="80" width="80"></img>
+                <div style={{
+                  height: "65px",
+                  width: "65px",
+                  minHeight: "65px",
+                  minWidth: "65px"
+                }}>
+
+                <ResponsiveImage src={logo}/>
+                </div>
                 <h4>RUG SEEKERS</h4>
             </div>
-            <div className={"sliding-panel" + slideClass}>
-                <Links slide={true} />
-            </div>
+            
+            <Links slide={false} />
             <div
                 className="hamburger-yum"
                 onClick={() => {
@@ -57,8 +61,10 @@ function Navigation() {
             >
                 {hamburgerMenu()}
             </div>
+            <div className={"sliding-panel" + slideClass}>
+                <Links slide={true} />
+            </div>
 
-            <Links slide={false} />
         </nav>
     );
 }
