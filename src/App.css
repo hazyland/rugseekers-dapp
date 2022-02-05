@@ -327,6 +327,7 @@ padding: 10px;
   color: black;
   background-color: white;
   border-radius: 15px;
+  justify-self: center;
 }
 
 .tokenomicsPanelTabContent{
