@@ -8,6 +8,7 @@ import {ReactComponent as BloombergLogo} from "../assets/bloomberg-logo.svg"
 import msnIcon from "../assets/msn.png"
 import logo from '../assets/rug-logo 2.png'
 import { useAppProvider } from '../contexts/App/AppProvider';
+import Footer from '../Footer'
 
 
 
@@ -76,24 +77,9 @@ function Landing() {
           <ProjectCards />
         </div>
         <RoadmapCards />
-        <div className="footer">
-          <div className="quick-links">
-            <a>Whitepaper</a>
-            <a>Roadmap</a>
-            <a>Tokenomics</a>
-            <a>Reflection</a>
-            <a>Vetted Projects</a>
-            <a>Online Store</a>
-            <a>How to Buy</a>
-            <a>Buy Crypto</a>
-          </div>
 
-          <div>
-            <h4>Contact Us</h4>
-            <a>RugSeekers@gmail.com</a>
-            <p>Copyright Rugseekers 2022 - All Rights Reserved</p>
-          </div>
-        </div>
+        <Footer/>
+        
       </div>
     );
 

@@ -13,6 +13,9 @@ import "./dapp.css";
 import { useWeb3ProviderDispatch, useWeb3ProviderState } from "../contexts/Web3/Web3Provider";
 import { useEffect } from "react";
 import { ethers } from "ethers";
+import Footer from '../Footer'
+
+
 function Title(props: { title: string; desc: string }) {
     return (
         <>
@@ -256,24 +259,8 @@ export default function Dapp() {
               </div>
             </div>
           </div>
-          <div className="footer">
-            <div className="quick-links">
-              <a>Whitepaper</a>
-              <a>Roadmap</a>
-              <a>Tokenomics</a>
-              <a>Reflection</a>
-              <a>Vetted Projects</a>
-              <a>Online Store</a>
-              <a>How to Buy</a>
-              <a>Buy Crypto</a>
-            </div>
+          <Footer/>
 
-            <div>
-              <h4>Contact Us</h4>
-              <a>RugSeekers@gmail.com</a>
-              <p>Copyright Rugseekers 2022 - All Rights Reserved</p>
-            </div>
-          </div>
         </div>
       </div>
     );
