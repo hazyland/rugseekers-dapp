@@ -230,6 +230,30 @@ export default function Dapp() {
                 Claim Rewards As
               </div>
               <div className="claim-rewards" 
+                  onClick={async () => {
+                    try {
+                      if (w3State.currentWallet) {
+                        const p = new ethers.providers.Web3Provider(
+                          w3State.walletProvider
+                        );
+                        const signer = p.getSigner();
+                        console.log(signer);
+                        const contractSigner =
+                          await w3State.currentContract.connect(signer);
+                        console.log(contractSigner);
+                        const res = await contractSigner.compound();
+                        console.log(res);
+                        getUserData()
+                      }
+                    } catch (e) {
+                      console.log(e);
+                    }
+    
+                    // debugger
+                    // console.log(res)
+                  }}
+              >Compound</div>
+              <div className="claim-rewards" 
                             onClick={async () => {
                                 try {
                                   if (w3State.currentWallet) {
@@ -248,7 +272,7 @@ export default function Dapp() {
                                 } catch (e) {
                                   console.log(e);
                                 }}}
-              >Claim Rewards</div>
+              >Claim Reward as BNB</div>
             </div>
             <div className="promotional-token">
               <Title title="Promotional Token" desc="Check out our latest promo token. " />
