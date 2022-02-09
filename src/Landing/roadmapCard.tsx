@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const phaseItems = [
     //Phase 1
@@ -111,11 +111,22 @@ function PhaseBox(props: { index: number; items: any[] }) {
 }
 
 export default function RoadmapCard() {
+    const [phases, setPhases] = useState([])
+
+    async function getPhases() {
+        const res = await fetch('/phases.json')
+        const phases = await res.json();
+        setPhases(phases)
+        console.log(phases)
+      }
+      useEffect(() => {
+        getPhases()
+      }, [])
     return (
         <div className="roadmapCard card dark-gray-background lane-padding" id="roadmap">
             <h1 className="orange_text">Roadmap</h1>
             <div className="phases">
-                {phaseItems.map((phase, index) => {
+                {phases.map((phase, index) => {
                     return <PhaseBox items={phase} index={index} />;
                 })}
             </div>

@@ -71,7 +71,7 @@ function Footer() {
           </div>
         {/* </div> */}
       </div>
-      <p style={{ textAlign: "center" }}>Copyright Rugseekers 2022 - All Rights Reserved</p>
+      <p style={{ textAlign: "center" }}>Copyright Seek 2022 - All Rights Reserved</p>
     </div>
   );
 }

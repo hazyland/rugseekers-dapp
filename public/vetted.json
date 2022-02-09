@@ -1,0 +1,15 @@
+{
+    
+    "green": 93,
+    "orange": 85,
+    "red": 60,
+    "projects": [
+    { "image":"vetted/logo.png","projectName": "WillyWonkaInu", "rating": 93.5 },
+    { "image":"vetted/logo.png","projectName": "SimpleJackInu", "rating": 100 },
+    { "image":"vetted/logo.png","projectName": "Project Name Here", "rating": 84 },
+    { "image":"vetted/logo.png","projectName": "Cumbucket", "rating": 50 },
+    { "image":"vetted/logo.png","projectName": "Project Name Here", "rating": 93.5 },
+    { "image":"vetted/logo.png","projectName": "Project Name Here", "rating": 93.5 },
+    { "image":"vetted/logo.png","projectName": "Project Name Here", "rating": 93.5 }
+]
+}

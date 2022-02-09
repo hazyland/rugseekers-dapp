@@ -52,12 +52,10 @@ function App() {
       <BrowserRouterProvider>
           <Web3Provider>
           <Navigation></Navigation>
-    
             <Routes>
               <Route path="/dapp" element={<Dapp />} />
-              <Route path="/landing" element={<Landing />} />
+              <Route path="/" element={<Landing />} />
             </Routes>
-        
           </Web3Provider>
       </BrowserRouterProvider>
     </div>

@@ -1,1 +1,1 @@
-Rugseeker Dapp
+SEEK Dapp

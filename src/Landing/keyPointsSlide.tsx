@@ -4,9 +4,9 @@ import astro from '../assets/astro.png'
 import leadership from '../assets/leadership.png'
 import shield from '../assets/shield.png'
 
-let string1 = "RugSeekers is dedicated to crypto space security and creating a safe environment for you to invest. We aim to help rid the markety of rug pulls and develop bot eradication software.";
+let string1 = "Seek is dedicated to crypto space security and creating a safe environment for you to invest. We aim to help rid the markety of rug pulls and develop bot eradication software.";
 let string2 = "Your financial investment is no only important to you but to us as well. In a fast moving volatile market, details are often left behind, Its our duty to ensure the details matter and you matter as well."
-let string3 = "RugSeekers is dedicated to crypto space security and creating a safe environment for you to invest. We aim to help rid the markety of rug pulls and develop bot eradication software.";
+let string3 = "Seek is dedicated to crypto space security and creating a safe environment for you to invest. We aim to help rid the markety of rug pulls and develop bot eradication software.";
 
 
 export default function KeyPointsSlide() {

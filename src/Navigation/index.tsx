@@ -12,14 +12,14 @@ function Links(props: { slide: boolean }) {
     const className = props.slide ? " slide" : "";
     return (
         <div className={"nav-links" + className}>
+            <Link to="/">Home</Link>
             <a>Whiteaper</a>
-            <a href="#roadmap">Roadmap</a>
-            <a>Tokenomics</a>
-            <a>Reflection</a>
-            <a>VettedProjects</a>
-            <a>Online Store</a>
-            <a>How to Buy</a>
-            <Link to="/landing">Main Website</Link>
+            <a href="/#roadmap">Roadmap</a>
+            <a href="/#tokenomics">Tokenomics</a>
+            <a href="/#bounty">Bounty</a>
+            <a href="/#vetted">VettedProjects</a>
+            {/* <a href="#">Online Store</a> */}
+            {/* <a>How to Buy</a> */}
             <Link to="/Dapp">Dapp</Link>
             <ConnectWalletButton />
         </div>

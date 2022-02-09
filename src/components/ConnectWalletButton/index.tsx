@@ -8,6 +8,7 @@ export function ConnectWalletButton() {
     async function clearWallet() {
       await web3State.web3Modal.resetState();
       await web3State.web3Modal.clearCachedProvider();
+      localStorage.clear()
       web3Dispatch({ type: "UPDATE_CURRENT_WALLET", payload: "" });
     }
   

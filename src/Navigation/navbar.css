@@ -42,6 +42,12 @@ float: right;
 display: none;
 justify-content: space-evenly;
 }
+
+.nav-links a{
+  text-decoration: none;
+  color: white;
+}
+
 .nav-links.slide {
 display: block;
 }

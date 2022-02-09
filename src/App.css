@@ -479,3 +479,9 @@ display: flex;
   background-color: black; /* For browsers that do not support gradients */
   background-image: linear-gradient(rgb(38, 38, 38) 51%, white 49%);
 }
+
+#vetted {
+  min-height: 50vh;
+  height: 350px;
+  overflow: auto;
+}

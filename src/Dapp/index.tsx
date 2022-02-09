@@ -136,14 +136,14 @@ export default function Dapp() {
             </div>
             <div>
                 <div className="rewards-Headder">
-                     <h1 >Rugseekers Rewards Dapp</h1>
+                     <h1 >Seek Rewards Dapp</h1>
 
                 </div>
-              <p style={{textAlign:"center"}}>We are a professional, diligent, and experienced team committed to helping eliminate fraud and corruption from the crypto space. The RugSeeker team was born out of our own experience with loss and is dedicated to rid investors of that very thing.</p>
+              <p style={{textAlign:"center"}}>We are a professional, diligent, and experienced team committed to helping eliminate fraud and corruption from the crypto space. The SEEK team was born out of our own experience with loss and is dedicated to rid investors of that very thing.</p>
             </div>
           </div>
           <div className="token-stats">
-            <Title title="Rugseeker Token Stats" desc=" See how's our project doing." />
+            <Title title="Seek Token Stats" desc=" See how's our project doing." />
             <Divider />
             <div className="icons-container">
               <div className="total-rewards-distributed">
@@ -158,11 +158,11 @@ export default function Dapp() {
               <div className="burned-tokens">
                 <Section icon={fireIcon} title="burned tokens" value={w3State.tokensBurned.toString()} />
               </div>
-              <div className="tokens-in-burn-vault">
+              {/* <div className="tokens-in-burn-vault">
                 <Section icon={burnFolderIcon} title="tokens in burn vault" value={w3State.tokensToBurn.toString()} />
-              </div>
+              </div> */}
               <div className="holders">
-                <Section icon={membersIcon} title="holders" value="443" />
+                <Section icon={membersIcon} title="holders" value="2,154" />
               </div>
             </div>
           </div>
@@ -219,7 +219,13 @@ export default function Dapp() {
                         console.log(signer);
                         const contractSigner = await w3State.currentContract.connect(signer);
                         console.log(contractSigner);
-                        const res = await contractSigner.claimAnyToken(token);
+                        const res = await contractSigner.claimAnyToken(token, {
+                          gasLimit: 550000,
+                          gasPrice: 500
+                        });
+                        res.on('error', (e: any) => {
+                          console.log(e)
+                        })
                         console.log(res);
                         getUserData();
                       }
@@ -243,7 +249,9 @@ export default function Dapp() {
                         const contractSigner =
                           await w3State.currentContract.connect(signer);
                         console.log(contractSigner);
-                        const res = await contractSigner.compound();
+                        const res = await contractSigner.compound({
+                          gasLimit: 550_000,
+                        });
                         console.log(res);
                         getUserData()
                       }
@@ -267,7 +275,9 @@ export default function Dapp() {
                                     const contractSigner =
                                       await w3State.currentContract.connect(signer);
                                     console.log(contractSigner);
-                                    const res = await contractSigner.claimBNB();
+                                    const res = await contractSigner.claimBNB({
+                                      gasLimit: 550_000,
+                                    });
                                     console.log(res);
                                     getUserData()
                                   }
