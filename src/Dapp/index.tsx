@@ -94,6 +94,7 @@ function Section(props: { icon: any; title?: string; value?: string }) {
                         style={{
                             textAlign: "left",
                             margin: "0",
+                            color: "white"
                         }}
                     >
                         {props.value}
@@ -138,7 +139,7 @@ export default function Dapp() {
                      <h1 >Rugseekers Rewards Dapp</h1>
 
                 </div>
-              <p>We are a professional, diligent, and experienced team committed to helping eliminate fraud and corruption from the crypto space. The RugSeeker team was born out of our own experience with loss and is dedicated to rid investors of that very thing.</p>
+              <p style={{textAlign:"center"}}>We are a professional, diligent, and experienced team committed to helping eliminate fraud and corruption from the crypto space. The RugSeeker team was born out of our own experience with loss and is dedicated to rid investors of that very thing.</p>
             </div>
           </div>
           <div className="token-stats">
