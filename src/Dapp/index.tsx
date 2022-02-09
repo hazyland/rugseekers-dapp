@@ -83,6 +83,7 @@ function Section(props: { icon: any; title?: string; value?: string }) {
                         style={{
                             margin: "0",
                             textAlign: "left",
+                            color: "white"
                         }}
                     >
                         {props.title}
