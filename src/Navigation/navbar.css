@@ -71,7 +71,7 @@ display: block;
     transform: translate(0, 67vh);
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 900px) {
     .hamburger-yum {
         display: none;
     }
