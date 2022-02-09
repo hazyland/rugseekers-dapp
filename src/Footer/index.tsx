@@ -34,19 +34,18 @@ function Footer() {
       <div style={{ display: "flex", justifyContent: "space-around" }}>
         <div className="quick-links" style={{ display: "flex", flexDirection: "column", justifyContent: "space-around", marginTop: "5px" }}>
           <h4>Quick Links</h4>
-          <div style={{display: "flex"}}>
-              <div style={{display: "flex", flexDirection:"column"}}>
-            <a>Whitepaper</a>
-            <a>Roadmap</a>
-            <a>Tokenomics</a>
-            <a>Reflection</a>
+          <div style={{display: "flex", fontSize:"12px"}}>
+              <div style={{display: "flex",margin:"5px", flexDirection:"column"}}>
+                <a>Whitepaper</a>
+                <a>Roadmap</a>
+                <a>Tokenomics</a>
+                <a>Reflection</a>
               </div>
-              <div style={{display: "flex", flexDirection:"column"}}>
-            <a>Vetted Projects</a>
-
-            <a>Online Store</a>
-            <a>How to Buy</a>
-            <a>Buy Crypto</a>
+              <div style={{display: "flex",margin:"5px", flexDirection:"column"}}>
+                <a>Vetted Projects</a>
+                <a>Online Store</a>
+                <a>How to Buy</a>
+                <a>Buy Crypto</a>
               </div>
           </div>
         </div>
@@ -57,23 +56,20 @@ function Footer() {
         </div>
         <div>
           <h4>Social Links</h4>
-          <div className={"socialWidget-container" + "-mobile"}>
-            <div className={"socialWidget-mobile"}>
-              <div className="social-icon-container">
+          {/* <div className={"socialWidget-container" + "-mobile"}> */}
+            <div style={{display:"flex", justifyContent: "space-between"}}>
                 <img src={twiter}></img>
-              </div>
-              <div className="social-icon-container">
                 <img src={telegram}></img>
-              </div>
-              <div className="social-icon-container">
                 <img src={discord}></img>
-              </div>
-              <div className="social-icon-container">
                 <img src={facebook}></img>
-              </div>
+              {/* <div className="social-icon-container"> */}
+              {/* </div> */}
+
+
+
             </div>
           </div>
-        </div>
+        {/* </div> */}
       </div>
       <p style={{ textAlign: "center" }}>Copyright Rugseekers 2022 - All Rights Reserved</p>
     </div>
