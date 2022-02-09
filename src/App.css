@@ -329,7 +329,7 @@ padding: 10px;
   width:100%;
   max-width: 500px;
   height: auto;
-  min-height: 300px;
+  min-height: 285px;
   color: black;
   background-color: white;
   border-radius: 15px;
@@ -417,6 +417,10 @@ padding: 10px;
   .content-lane {
     padding: 1rem;
   }
+
+  .footer{
+    flex-direction: column;
+  }
 }
 @media only screen and (max-width: 400px) {
   html {
@@ -425,6 +429,7 @@ padding: 10px;
   .content-lane {
     padding: 1rem;
   }
+
 }
 
 .card {

@@ -21,7 +21,9 @@ function Links(props: { slide: boolean }) {
             {/* <a href="#">Online Store</a> */}
             {/* <a>How to Buy</a> */}
             <Link to="/Dapp">Dapp</Link>
+            <a>
             <ConnectWalletButton />
+            </a>
         </div>
     );
 }

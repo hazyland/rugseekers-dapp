@@ -137,6 +137,14 @@ p {
     border-radius:10px;
 }
 
+.copyright{
+    /* margin-top: 2rem; */
+    background-color: rgb(55, 55, 55);
+    width: 100%;
+    color: white;
+    border-radius:10px;
+}
+
 .claimable-rewards {
     
 }

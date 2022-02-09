@@ -13,21 +13,28 @@ const AppState = useAppProvider();
 
   return (
     <div className={"socialWidget-container" + (AppState.appDimensions.innerWidth <= 500 ? "-mobile" : "")}>
-
-    <div className={AppState.appDimensions.innerWidth <= 500 ? "socialWidget-mobile" : "socialWidget"}>
-      <div className="social-icon-container">
-        <img src={twiter}></img>
+      <div className={AppState.appDimensions.innerWidth <= 500 ? "socialWidget-mobile" : "socialWidget"}>
+        <div className="social-icon-container">
+          <a href="https://wwwhttps://www.twitter.com/@SEEK_Token2.qries.com/">
+            <img src={twiter}></img>
+          </a>
+        </div>
+        <div className="social-icon-container">
+          <a href="https://t.me/SEEK_Token">
+            <img src={telegram}></img>
+          </a>
+        </div>
+        <div className="social-icon-container">
+          <a href="https://discord.gg/FEWgsgHZ">
+            <img src={discord}></img>
+          </a>
+        </div>
+        <div className="social-icon-container">
+          <a href="https://www.facebook.com/groups/1242036486300481">
+            <img src={facebook}></img>
+          </a>
+        </div>
       </div>
-      <div className="social-icon-container">
-        <img src={telegram}></img>
-      </div>
-      <div className="social-icon-container">
-        <img src={discord}></img>
-      </div>
-      <div className="social-icon-container">
-        <img src={facebook}></img>
-      </div>
-    </div>
     </div>
   );
 }

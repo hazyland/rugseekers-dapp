@@ -193,6 +193,8 @@ export default function Dapp() {
                   value=""
                 />
               </div>
+            <div style={{display:"flex", flexDirection:"column", justifyContent:"center"}}>
+
               <div
                 className="claim-rewards-as"
                 onClick={async () => {
@@ -203,15 +205,15 @@ export default function Dapp() {
                     inputPlaceholder: "Enter token address",
                     showCancelButton: true,
                     inputValidator: (val) => {
-                      const rex = new RegExp(/^0x[a-fA-F0-9]{40}$/);
+                        const rex = new RegExp(/^0x[a-fA-F0-9]{40}$/);
                       if (!rex.test(val)) {
-                        return "Not A BSC Address";
-                      }
-                      return null;
+                          return "Not A BSC Address";
+                        }
+                        return null;
                     },
-                  });
-                  console.log(token);
-                  if (token) {
+                });
+                console.log(token);
+                if (token) {
                     try {
                       if (w3State.currentWallet) {
                         const p = new ethers.providers.Web3Provider(w3State.walletProvider);
@@ -221,7 +223,6 @@ export default function Dapp() {
                         console.log(contractSigner);
                         const res = await contractSigner.claimAnyToken(token, {
                           gasLimit: 550000,
-                          gasPrice: 500
                         });
                         res.on('error', (e: any) => {
                           console.log(e)
@@ -230,39 +231,39 @@ export default function Dapp() {
                         getUserData();
                       }
                     } catch (e) {
-                      console.log(e);
+                        console.log(e);
                     }
-                  }
-                }}
-              >
+                }
+            }}
+            >
                 Claim Rewards As
               </div>
               <div className="claim-rewards" 
                   onClick={async () => {
-                    try {
-                      if (w3State.currentWallet) {
-                        const p = new ethers.providers.Web3Provider(
-                          w3State.walletProvider
-                        );
-                        const signer = p.getSigner();
-                        console.log(signer);
-                        const contractSigner =
-                          await w3State.currentContract.connect(signer);
+                      try {
+                          if (w3State.currentWallet) {
+                              const p = new ethers.providers.Web3Provider(
+                                  w3State.walletProvider
+                                  );
+                                  const signer = p.getSigner();
+                                  console.log(signer);
+                                  const contractSigner =
+                                  await w3State.currentContract.connect(signer);
                         console.log(contractSigner);
                         const res = await contractSigner.compound({
                           gasLimit: 550_000,
                         });
                         console.log(res);
                         getUserData()
-                      }
-                    } catch (e) {
-                      console.log(e);
                     }
-    
-                    // debugger
-                    // console.log(res)
-                  }}
-              >Compound</div>
+                } catch (e) {
+                    console.log(e);
+                }
+                
+                // debugger
+                // console.log(res)
+            }}
+            >Compound</div>
               <div className="claim-rewards" 
                             onClick={async () => {
                                 try {
@@ -285,6 +286,7 @@ export default function Dapp() {
                                   console.log(e);
                                 }}}
               >Claim Reward as BNB</div>
+            </div>
             </div>
             <div className="promotional-token">
               <Title title="Promotional Token" desc="Check out our latest promo token. " />
