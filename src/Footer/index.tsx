@@ -7,6 +7,11 @@ import hamburger from "../assets/hamburger.png";
 import { useAppProvider } from "../contexts/App/AppProvider";
 import { ResponsiveImage } from "../lib/UI";
 
+import twiter from "../assets/twiter.png";
+import telegram from "../assets/telegram.png";
+import facebook from "../assets/facebook.png";
+import discord from "../assets/discord.png";
+
 function Links() {
 
 
@@ -25,30 +30,52 @@ function Footer() {
   }
 
   return (
-    <div className="footer" style={{ padding: "5px", }}>
-        <div style={{display:"flex", justifyContent:"space-around"}}>
+    <div className="footer" style={{ padding: "5px" }}>
+      <div style={{ display: "flex", justifyContent: "space-around" }}>
+        <div className="quick-links" style={{ display: "flex", flexDirection: "column", justifyContent: "space-around", marginTop: "5px" }}>
+          <h4>Quick Links</h4>
+          <div style={{display: "flex"}}>
+              <div style={{display: "flex", flexDirection:"column"}}>
+            <a>Whitepaper</a>
+            <a>Roadmap</a>
+            <a>Tokenomics</a>
+            <a>Reflection</a>
+              </div>
+              <div style={{display: "flex", flexDirection:"column"}}>
+            <a>Vetted Projects</a>
 
-      <div className="quick-links" style={{ display: "flex",flexDirection:"column", justifyContent: "space-around", marginTop: "5px" }}>
-        <h4>Quick Links</h4>
-        <a>Whitepaper</a>
-        <a>Roadmap</a>
-        <a>Tokenomics</a>
-        <a>Reflection</a>
-        <a>Vetted Projects</a>
-        <a>Online Store</a>
-        <a>How to Buy</a>
-        <a>Buy Crypto</a>
-      </div>
-
-      <div>
-        <h4>Contact Us</h4>
-        <a style={{color:"orange"}}>RugSeekers@gmail.com</a>
-      </div>
-      <div>
-        <h4>Social Links</h4>
-      </div>
+            <a>Online Store</a>
+            <a>How to Buy</a>
+            <a>Buy Crypto</a>
+              </div>
+          </div>
         </div>
-      <p>Copyright Rugseekers 2022 - All Rights Reserved</p>
+
+        <div>
+          <h4>Contact Us</h4>
+          <a style={{ color: "orange" }}>RugSeekers@gmail.com</a>
+        </div>
+        <div>
+          <h4>Social Links</h4>
+          <div className={"socialWidget-container" + "-mobile"}>
+            <div className={"socialWidget-mobile"}>
+              <div className="social-icon-container">
+                <img src={twiter}></img>
+              </div>
+              <div className="social-icon-container">
+                <img src={telegram}></img>
+              </div>
+              <div className="social-icon-container">
+                <img src={discord}></img>
+              </div>
+              <div className="social-icon-container">
+                <img src={facebook}></img>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style={{ textAlign: "center" }}>Copyright Rugseekers 2022 - All Rights Reserved</p>
     </div>
   );
 }
