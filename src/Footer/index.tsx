@@ -25,8 +25,11 @@ function Footer() {
   }
 
   return (
-    <div className="footer">
-      <div className="quick-links">
+    <div className="footer" style={{ padding: "5px", }}>
+        <div style={{display:"flex", justifyContent:"space-around"}}>
+
+      <div className="quick-links" style={{ display: "flex",flexDirection:"column", justifyContent: "space-around", marginTop: "5px" }}>
+        <h4>Quick Links</h4>
         <a>Whitepaper</a>
         <a>Roadmap</a>
         <a>Tokenomics</a>
@@ -39,9 +42,13 @@ function Footer() {
 
       <div>
         <h4>Contact Us</h4>
-        <a>RugSeekers@gmail.com</a>
-        <p>Copyright Rugseekers 2022 - All Rights Reserved</p>
+        <a style={{color:"orange"}}>RugSeekers@gmail.com</a>
       </div>
+      <div>
+        <h4>Social Links</h4>
+      </div>
+        </div>
+      <p>Copyright Rugseekers 2022 - All Rights Reserved</p>
     </div>
   );
 }
