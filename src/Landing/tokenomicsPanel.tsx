@@ -50,23 +50,23 @@ export default function TokenomicsPanel() {
 
   return (
     <div className="tokenomicsPanel">
-    {/* <div className="phase-box"> */}
-        {/* <h3>High Level Tokenomics</h3> */}
-        <div className="tokenomics-List">
-          <div>
-            <h4>Primary</h4>
-          </div>
-          <div>8% Buy Tax</div>
-          <div>12% Sell Tax</div>
-            <div>
-                <h4>Secondary applies to each buy/sell</h4>
-                <div>20% to Marketing</div>
-                <div>20% to LP</div>
-                <div>20% to Operations</div>
-                <div>20% to Rewards</div>
-                <div>20% to Bounty</div>
-            </div>
+      {/* <div className="phase-box"> */}
+      {/* <h3>High Level Tokenomics</h3> */}
+      <div className="tokenomics-List">
+        <div>
+          <h3 style={{ marginTop: "0px", color: "rgb(39, 233, 0)" }}>Primary</h3>
         </div>
+        <div>8% Buy Tax</div>
+        <div>12% Sell Tax</div>
+        <div>
+          <h3 style={{ color: "#00b0ff" }}>Secondary applies to each buy/sell</h3>
+          <div>20% to Marketing</div>
+          <div>20% to LP</div>
+          <div>20% to Operations</div>
+          <div>20% to Rewards</div>
+          <div>20% to Bounty</div>
+        </div>
+      </div>
     </div>
     // </div>
   );
