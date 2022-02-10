@@ -4,7 +4,7 @@ import RoadmapCards from './roadmapCard';
 import TokenomicsPanel from './tokenomicsPanel';
 import KeyPointsSlide from './keyPointsSlide';
 import Social from './social'
-import {ReactComponent as BloombergLogo} from "../assets/bloomberg-logo.svg"
+// import {ReactComponent as BloombergLogo} from "../assets/bloomberg-logo.svg"
 import msnIcon from "../assets/msn.png"
 import logo from '../assets/rug-logo 2.png'
 import mi from '../assets/market-insider.jpg'
@@ -41,8 +41,7 @@ function Landing() {
             <div className="landing-header-1">SEEK has been featured in</div>
             <div className="featuredIcons">
               <div>
-                <BloombergLogo />
-                {/* <img src={bountyIMG} height="100" width="100"></img> */}
+                <ResponsiveImage src={"/images/bloomberg.png"} />
               </div>
               <div>
                 <ResponsiveImage src={msnIcon} />

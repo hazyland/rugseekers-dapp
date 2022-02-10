@@ -15,7 +15,7 @@ const AppState = useAppProvider();
     <div className={"socialWidget-container" + (AppState.appDimensions.innerWidth <= 500 ? "-mobile" : "")}>
       <div className={AppState.appDimensions.innerWidth <= 500 ? "socialWidget-mobile" : "socialWidget"}>
         <div className="social-icon-container">
-          <a href="https://wwwhttps://www.twitter.com/@SEEK_Token2.qries.com/">
+          <a href="https://www.twitter.com/@SEEK_Token2/">
             <img src={twiter}></img>
           </a>
         </div>
