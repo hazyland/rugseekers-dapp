@@ -26,12 +26,11 @@ function Landing() {
           <div className={"who-is " + (AppState.appDimensions.innerWidth <= 500 ? "row-2" : "col-2")}>
             <div>
               <h3>Worlds first project to pay a "bounty" for tips the lead to stopping corruption.</h3>
-              <div className="landing-header-1">Who are Seek?</div>
-              <div>We are a professional, diligent, and experienced team committed to helping eliminate fraud and corruption from the crypto space. The Seek team was born out of our own experience with loss and is dedicated to rid investors of that very thing.</div>
+              <div className="landing-header-1">Who is Seek?</div>
+              <div>We are a professional, diligent, and experienced team committed to helping eliminate fraud and corruption from the crypto space. The SEEK team was born out of our own experience with loss and is dedicated to rid investors of that very thing.</div>
             </div>
           </div>
           <Social />
-          <div></div>
         </div>
         <div id="grad1">
           <img src={logo} height="200" width="200"></img>
@@ -58,8 +57,8 @@ function Landing() {
           <div className="landingRow4">
             <div>
               <img src={bountyIMG} height="100" width="100"></img>
-              <div className="landing-header-1">Yar Bounty Program</div>
-              <div className="textBlob">Please list the contract address and name of the project below that you would like SEEK to investigate.Your personla information is kept completely and 100% secured with in our system. You can also use the form below to submit feedback or suggestions on how we can improve the project. Thank you. Fight the good fight and lets #stopinsanity</div>
+              <div className="landing-header-1">Bounty Program</div>
+              <div className="textBlob">Please list the contract address and name of the project below that you would like SEEK to investigate. Your personal information is kept completely and 100% secured with in our system. You can also use the form below to submit feedback or suggestions on how we can improve the project. Thank you! Fight the good fight and lets #stopinsanity.</div>
             </div>
             <div className="contactPanelContainer">
               <ContactPanel />

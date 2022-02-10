@@ -1,17 +1,8 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import logo from "../assets/rug-logo 2.png";
-import { ConnectWalletButton } from "../components/ConnectWalletButton";
-import { useWeb3ProviderState } from "../contexts/Web3/Web3Provider";
 import hamburger from "../assets/hamburger.png";
-import { useAppProvider } from "../contexts/App/AppProvider";
-import { ResponsiveImage } from "../lib/UI";
-
 import twiter from "../assets/twiter.png";
 import telegram from "../assets/telegram.png";
 import facebook from "../assets/facebook.png";
 import discord from "../assets/discord.png";
-import { relative } from "path/posix";
 
 function Links() {
 
@@ -25,11 +16,7 @@ function Links() {
 
 function Footer() {
     
-    
-    function hamburgerMenu() {
-        return <img src={hamburger} height="20" width="25"></img>;
-  }
-
+ 
   return (
     <div className="copyright">
       <div className="footer" style={{ padding: "5px", display: "flex", justifyContent: "space-around" }}>
@@ -39,15 +26,13 @@ function Footer() {
           <div style={{ display: "flex", fontSize: "12px", justifyContent: "center" }}>
             <div style={{ display: "flex", margin: "5px", flexDirection: "column" }}>
               <a>Whitepaper</a>
-              <a>Roadmap</a>
-              <a>Tokenomics</a>
-              <a>Reflection</a>
+              <a href="/#roadmap">Roadmap</a>
+              <a href="/#tokenomics">Tokenomics</a>
             </div>
             <div style={{ display: "flex", margin: "5px", flexDirection: "column" }}>
-              <a>Vetted Projects</a>
+              <a href="/#vetted">Vetted Projects</a>
               <a>Online Store</a>
               <a>How to Buy</a>
-              <a>Buy Crypto</a>
             </div>
           </div>
         </div>
@@ -84,7 +69,7 @@ function Footer() {
         {/* </div> */}
         {/* </div> */}
       </div>
-      <p style={{ textAlign: "center", marginBottom:"0px" }}>Copyright Rugseekers 2022 - All Rights Reserved</p>
+      <p style={{ textAlign: "center", marginBottom:"0px" }}>Copyright SEEK 2022 - All Rights Reserved</p>
     </div>
   );
 }

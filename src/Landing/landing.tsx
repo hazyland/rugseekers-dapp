@@ -30,10 +30,10 @@ import TokenomicsPanel from "./tokenomicsPanel";
 function Landing() {
   return (
     <div className="landing">
-      <div className="landing-row row-1">Who are SEEK?</div>
+      <div className="landing-row row-1">Who is SEEK?</div>
       <div className="landing-row">Bloomberg</div>
       <div className="landing-row">
-        Yar Bounty Program
+        Bounty Program
         <div className="contactPanelContainer">
           <ContactPanel />
         </div>

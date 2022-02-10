@@ -13,14 +13,14 @@ function Links(props: { slide: boolean }) {
     return (
         <div className={"nav-links" + className}>
             <Link to="/">Home</Link>
-            <a>Whiteaper</a>
+            <a>Whitepaper</a>
             <a href="/#roadmap">Roadmap</a>
             <a href="/#tokenomics">Tokenomics</a>
             <a href="/#bounty">Bounty</a>
-            <a href="/#vetted">VettedProjects</a>
+            <a href="/#vetted">Vetted Projects</a>
             {/* <a href="#">Online Store</a> */}
             {/* <a>How to Buy</a> */}
-            <Link to="/Dapp">Dapp</Link>
+            <Link to="/Dapp">DApp</Link>
             <a>
             <ConnectWalletButton />
             </a>
@@ -51,7 +51,7 @@ function Navigation() {
 
                 <ResponsiveImage src={logo}/>
                 </div>
-                <h4>RUG SEEKERS</h4>
+                <h4>SEEK</h4>
             </div>
             
             <Links slide={false} />

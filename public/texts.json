@@ -1,0 +1,14 @@
+{
+    "left": {
+       "text": "ok ser this is text ser",
+       "icon": "images/astro.png"
+    },
+    "center": {
+        "text": "ok ser this is text ser",
+        "icon": "images/leadership.png"
+     },
+    "right":{
+        "text": "ok ser this is text ser",
+        "icon": "images/shield.png"
+     }
+}

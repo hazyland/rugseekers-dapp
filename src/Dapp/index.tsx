@@ -11,7 +11,7 @@ import Swal from "sweetalert2";
 import { Divider, ResponsiveImage } from "../lib/UI";
 import "./dapp.css";
 import { useWeb3ProviderDispatch, useWeb3ProviderState } from "../contexts/Web3/Web3Provider";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import Footer from '../Footer'
 
@@ -117,8 +117,20 @@ export default function Dapp() {
             web3Dispatch({ type: "UPDATE_USER_TOTAL_REWARDS", payload: rewards });
         }
     }
+    const [promo, setPromo] = useState<any>({image: '', name: ''});
+    async function getPromoToken() {
+
+      const res = await fetch("/promo.json");
+      const body = await res.json();
+      setPromo({
+        image: body.image,
+        name: body.name,
+      })
+    
+    }
     useEffect(() => {
         getUserData();
+        getPromoToken();
         const interval = setInterval(() => {
             getUserData();
         }, 30000);
@@ -150,7 +162,7 @@ export default function Dapp() {
                 <Section icon={giftIcon} title={"total rewards distributed"} value={`${w3State.totalRewards} BNB`} />
               </div>
               <div className="liquidity-unlock-timer">
-                <Section title="liquidity unlock timer" value={`${w3State.timeLeftHours}D ${w3State.timeLeftHours}HR ${w3State.timeLeftSeconds}M`} icon={timerIcon} />
+                <Section title="liquidity unlock timer" value={`${w3State.timeLeftHours}H ${w3State.timeLeftMinutes}Min ${w3State.timeLeftSeconds}Sec`} icon={timerIcon} />
               </div>
               <div className="circulating-supply">
                 <Section icon={coinbagIcon} title="circulating supply" value={w3State.totalSupply.toString()} />
@@ -293,7 +305,7 @@ export default function Dapp() {
 
               <Divider />
               <div className="promo-token-1">
-                <Section icon={rugseekersLogo} title={"Eagle Eye Token"} />
+                <Section icon={promo.image} title={promo.name} />
               </div>
             </div>
           </div>

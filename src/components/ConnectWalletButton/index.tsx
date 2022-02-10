@@ -47,13 +47,27 @@ export function ConnectWalletButton() {
     );
     const formattedWallet = `${walletBegin}...${walletEnd}`;
     return (
-      <div className={"leftNavBottom"}>
+      <div className={"leftNavBottom"} style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center"
+      }}>
         {web3State.currentWallet ? (
           <span>{formattedWallet}</span>
         ) : (
           <span onClick={triggerWeb3Modal}>Connect Wallet</span>
         )}
-        {web3State.currentWallet && <span onClick={clearWallet}>DISCONNECT</span>}
+        {web3State.currentWallet && <div style ={{
+          background: "green",
+          position: "absolute",
+          transform: "translateY(100%)",
+          width: "min-content",
+          margin: "5px 0 0 0",
+          borderRadius: "6px",
+          padding: "5px",
+          cursor: "pointer",
+          boxShadow: "0px 0px 10px 2px black"
+        }} onClick={clearWallet}>DISCONNECT</div>}
       </div>
     );
   }
